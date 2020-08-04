@@ -1,6 +1,6 @@
 ---
 title: Develop for [!DNL Asset Compute Service].
-description: Create customization using [!DNL Asset Compute Service].
+description: Create custom workers using [!DNL Asset Compute Service].
 ---
 
 # Develop a custom applications {#develop}

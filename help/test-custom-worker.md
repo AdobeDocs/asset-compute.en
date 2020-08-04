@@ -7,7 +7,11 @@ description: Test and debug [!DNL Asset Compute Service] custom worker.
 
 ## Execute unit tests for a custom worker {#test-custom-worker}
 
-Install [Docker Desktop](https://www.docker.com/get-started) on your machine. To test a custom worker, execute `aio app test` command at the root of the application.
+Install [Docker Desktop](https://www.docker.com/get-started) on your machine. To test a custom worker, execute the following command at the root of the application:
+
+```bash
+$ aio app test
+```
 
 <!-- TBD
 To run tests for a custom worker, run `adobe-asset-compute test-worker` command in the root of the custom worker application application.

@@ -1,6 +1,6 @@
 ---
 title: Release notes of [!DNL Asset Compute Service].
-description: New features, enhancements, and known issues of [!DNL Asset Compute Service].
+description: New features, enhancements, and known issues in [!DNL Asset Compute Service].
 ---
 
 # Release notes of [!DNL Asset Compute Service] {#release-notes}
