@@ -1,6 +1,6 @@
 ---
-title: Introduction to the [!DNL Asset Compute Service].
-description: [!DNL Asset Compute Service] is a cloud-native asset processing service that helps reduce complexity and improves scalability.
+title: Architecture of [!DNL Asset Compute Service].
+description: How [!DNL Asset Compute Service] API, workers, and SDK work together to provide a cloud-native asset processing service.
 ---
 
 # Architecture of [!DNL Asset Compute Service] {#overview}
@@ -27,7 +27,7 @@ The architecture is compatible with Adobe Experience Data Model (XDM) Schema tha
 
 The architecture consists of the following parts:
 
-* **An API and orchestration layer** receives requests (in JSON format) which instruct the service to transform a source asset (or more) into multiple renditions. These requests are asynchronous and return with an activation id (aka "job id"). Instructions are purely declarative, and for all standard processing work (e.g. thumbnail generation, text extraction) consumers only specify the desired result, but not the workers that handle certain renditions. Generic API features such as authentication, analytics, rate limiting, are handled using the Adobe API Gateway in front of the service and manages all requests going to I/O Runtime. The worker routing is done dynamically by the orchestration layer. Custom workers can be specified by clients for specific renditions and include custom parameters. Worker execution can be fully parallelized as they are separate serverless functions in I/O Runtime.
+* **An API and orchestration layer** receives requests (in JSON format) which instruct the service to transform a source asset into multiple renditions. These requests are asynchronous and return with an activation id (aka "job id"). Instructions are purely declarative, and for all standard processing work (e.g. thumbnail generation, text extraction) consumers only specify the desired result, but not the workers that handle certain renditions. Generic API features such as authentication, analytics, rate limiting, are handled using the Adobe API Gateway in front of the service and manages all requests going to I/O Runtime. The worker routing is done dynamically by the orchestration layer. Custom workers can be specified by clients for specific renditions and include custom parameters. Worker execution can be fully parallelized as they are separate serverless functions in I/O Runtime.
 
 * **Workers to process assets** that specialize on certain types of file formats or target renditions. Conceptually, a worker is like the Unix pipe concept: an input file gets transformed into one or more output files.
 

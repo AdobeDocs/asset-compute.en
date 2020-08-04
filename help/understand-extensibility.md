@@ -1,6 +1,6 @@
 ---
-title: Considerations when creating and using [!DNL Asset Compute Service] custom worker.
-description: Considerations when creating and using [!DNL Asset Compute Service] custom worker.
+title: Understand about extending [!DNL Asset Compute Service].
+description: When and how to extend the [!DNL Asset Compute Service] functionality to do custom asset processing.
 ---
 
 # Introduction to extensibility {#introduction-to-extensibilty}

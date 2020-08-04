@@ -1,6 +1,6 @@
 ---
-title: Contribute to the open source components of [!DNL Asset Compute Service].
-description: Contribute to the open source components of [!DNL Asset Compute Service].
+title: Contribute to the open-source components of [!DNL Asset Compute Service].
+description: Contribute to the open-source components of [!DNL Asset Compute Service].
 ---
 
 # Contribute {#contribute}
