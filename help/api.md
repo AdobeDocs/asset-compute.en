@@ -1,11 +1,11 @@
 ---
 title: [!DNL Asset Compute Service] HTTP API.
-description: [!DNL Asset Compute Service] HTTP API to create custom workers.
+description: [!DNL Asset Compute Service] HTTP API to create custom applications.
 ---
 
 # [!DNL Asset Compute Service] HTTP API {#asset-compute-http-api}
 
-The use of the API is limited to development purposes. The API is provided as a context when developing custom workers. [!DNL Adobe Experience Manager] as a Cloud Service uses the API to pass the processing information to a custom worker. For more information, see [Use asset microservices and Processing Profiles](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+The use of the API is limited to development purposes. The API is provided as a context when developing custom applications. [!DNL Adobe Experience Manager] as a Cloud Service uses the API to pass the processing information to a custom application. For more information, see [Use asset microservices and Processing Profiles](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -349,10 +349,10 @@ These are the available options for the `renditions` array in [/process](#proces
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
 | `fmt`             | `string` | The renditions target format, can also be `text` for text extraction and `xmp` for extracting XMP metadata as xml. See [supported formats](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
-| `worker`          | `string` | URL of a [custom worker](develop-custom-worker.md). Must be an `https://` URL. If this field is present, the rendition is created by a custom worker. Any other set rendition field is then used in the custom worker. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
+| `worker`          | `string` | URL of a [custom application](develop-custom-application.md). Must be an `https://` URL. If this field is present, the rendition is created by a custom application. Any other set rendition field is then used in the custom application. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL to which the generated rendition should be uploaded using HTTP PUT. | `http://w.com/img.jpg` |
 | `target`          | `object` | Multipart pre-signed URL upload information for the generated rendition. This is for [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) with this [multipart upload behavior](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array of strings, one for each pre-signed part URL</li><li>`minPartSize`: the minimum size to use for one part = url</li><li>`maxPartSize`: the maximum size to use for one part = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
-| `userData`        | `object` | Optional reserved space controlled by the client and passed through as is to rendition events. Allows clients to add custom information to identify rendition events. Must not be modified or relied upon in custom workers, as clients are free to change this any time. | `{ ... }` |
+| `userData`        | `object` | Optional reserved space controlled by the client and passed through as is to rendition events. Allows clients to add custom information to identify rendition events. Must not be modified or relied upon in custom applications, as clients are free to change this any time. | `{ ... }` |
 
 ### Rendition specific fields {#rendition-specific-fields}
 
@@ -360,7 +360,7 @@ For a list of currently supported file formats, see [supported file formats](htt
 
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
-| `*`               | `*`      | Advanced, custom fields can be added that a [custom worker](develop-custom-worker.md) understands. | |
+| `*`               | `*`      | Advanced, custom fields can be added that a [custom application](develop-custom-application.md) understands. | |
 | `width`           | `number` | Width in pixels. only for image renditions. | `200` |
 | `height`          | `number` | Height in pixels. only for image renditions. | `200` |
 |                   |          |  - if only `width` or `height` is specified, the resulting image uses that and keep the aspect ratio<br> - without `width` and `height`, the original image pixel size is used. It depends on the source type. For some formats, such as PDF files, a default size is used. | |

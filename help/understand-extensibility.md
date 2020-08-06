@@ -5,13 +5,13 @@ description: When and how to extend the [!DNL Asset Compute Service] functionali
 
 # Introduction to extensibility {#introduction-to-extensibilty}
 
-Many rendition requirements like converting to formats and resizing images are addressed by [Processing Profiles in [!DNL Experience Manager] as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html). More complex business requirements may need a custom-created solution that suits an organization's needs. [!DNL Asset Compute Service] can be extended by creating custom workers that are invoked from Processing Profiles in [!DNL Experience Manager] and that address the need for these [supported use cases](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+Many rendition requirements like converting to formats and resizing images are addressed by [Processing Profiles in [!DNL Experience Manager] as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html). More complex business requirements may need a custom-created solution that suits an organization's needs. [!DNL Asset Compute Service] can be extended by creating custom applications that are invoked from Processing Profiles in [!DNL Experience Manager] and that address the need for these [supported use cases](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
 >[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a Cloud Service.
 
-Extending [!DNL Asset Compute Service] with custom workers is made simple through the [worker SDK](https://github.com/adobe/asset-compute-sdk) and Project Firefly developer tooling. This allows developers to focus on business logic. Writing custom workers is not more complex than writing a plain serverless Adobe I/O Runtime action, which itself is nothing more than a single Node.js JavaScript function. The [basic worker example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) showcases that.
+Extending [!DNL Asset Compute Service] with custom applications is made simple through the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) and Project Firefly developer tooling. This allows developers to focus on business logic. Creating custom applications is as simple as creating a plain serverless Adobe I/O Runtime action. It is a single Node.js JavaScript function. The [basic custom application example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrates it.
 
 ## Prerequisites and provisioning requirements {#prerequisites-and-provisioning}
 
@@ -27,11 +27,11 @@ Ensure you meet the following prerequisites:
 <!-- TBD for later:
 
 * What all accesses and licenses are required?
-* What all permissions are required to create, debug, and deploy custom workers?
+* What all permissions are required to create, debug, and deploy custom applications?
 * How do developers get access and provision the required apps?
 * What is repository management?
 * Anything on security and data transfer?
 * What about handling personal or sensitive information?
-* Custom worker SLA is dependent on SLAs of various services it depends on.
-* Document how the devs can get to know the KPIs of their custom workers. The KPIs are dependent on the performance at Adobe's side, amongst other things.
+* Custom application SLA is dependent on SLAs of various services it depends on.
+* Document how the devs can get to know the KPIs of their custom applications. The KPIs are dependent on the performance at Adobe's side, amongst other things.
 -->
