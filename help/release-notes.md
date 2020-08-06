@@ -9,11 +9,11 @@ The latest release of [!DNL Asset Compute Service] is released on Jul 30, 2020.
 
 <!--
 
-To test your custom worker with the [developer tool](https://github.com/adobe/asset-compute-devtool), you need access to a [cloud storage container](https://github.com/adobe/asset-compute-devtool#prerequisites). Currently, Adobe supports Azure Blob Storage and AWS S3.
+To test your custom applications with the [developer tool](https://github.com/adobe/asset-compute-devtool), you need access to a [cloud storage container](https://github.com/adobe/asset-compute-devtool#prerequisites). Currently, Adobe supports Azure Blob Storage and AWS S3.
 
 >[!NOTE]
 >
->Cloud storage access is only required for using the developer tool. You can still create, test and deploy custom workers with out using the developer tool.
+>Cloud storage access is only required for using the developer tool. You can still create, test and deploy custom applications with out using the developer tool.
 -->
 
 ## What is new {#what-is-new}
@@ -24,14 +24,14 @@ Currently, the [!DNL Asset Compute Service] can only be used in [!DNL Experience
 
 ## Limitations and known issues {#known-limitations}
 
-To test your custom worker with the [developer tool](https://github.com/adobe/asset-compute-devtool), you need access to a [cloud storage container](https://github.com/adobe/asset-compute-devtool#prerequisites).
+To test your custom application with the [developer tool](https://github.com/adobe/asset-compute-devtool), you need access to a [cloud storage container](https://github.com/adobe/asset-compute-devtool#prerequisites).
 
-* The cloud storage (different than the [!DNL Experience Manager] blob store) access is needed only for the developer tool. You can still create, test, and deploy custom workers without the developer tool.
+* The cloud storage (different than the [!DNL Experience Manager] blob store) access is needed only for the developer tool. You can still create, test, and deploy custom applications without the developer tool.
 * It can be a shared container used by multiple developers across different projects.
 
 ## Contribute {#contribute-open-source}
 
-[!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe) that welcomes contributions from extension developers. All the components that are relevant to developing, building, and testing custom workers are open source. See [how and where to contribute to Compute Service](contribute-to-compute-service.md).
+[!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe) that welcomes contributions from extension developers. All the components that are relevant to developing, building, and testing custom applications are open source. See [how and where to contribute to Compute Service](contribute-to-compute-service.md).
 
 <!-- **TBD:**
 * Are we versioning the releases?

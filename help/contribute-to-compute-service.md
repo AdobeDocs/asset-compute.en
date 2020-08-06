@@ -5,7 +5,7 @@ description: Contribute to the open-source components of [!DNL Asset Compute Ser
 
 # Contribute {#contribute}
 
-[!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe). Adobe welcomes contributions from extension developers. All the components relevant to developing, building, and testing custom workers are open source. A few suggested ways in which you can contribute are:
+[!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe). Adobe welcomes contributions from extension developers. All the components relevant to developing, building, and testing custom applications are open source. A few suggested ways in which you can contribute are:
 
 * Share feedback: Create a GitHub issue in the appropriate repository, to report bugs in product or documentation, to request enhancements, and to request new features. If you are not sure which repository to submit your issue in, then log an issue in [Asset Compute SDK repository](https://github.com/adobe/asset-compute-sdk) so that it is routed appropriately.
 

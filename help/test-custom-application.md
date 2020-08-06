@@ -1,11 +1,11 @@
 ---
-title: Test and debug [!DNL Asset Compute Service] custom worker.
-description: Test and debug [!DNL Asset Compute Service] custom worker.
+title: Test and debug [!DNL Asset Compute Service] custom application.
+description: Test and debug [!DNL Asset Compute Service] custom application.
 ---
 
-# Test and debug a custom worker {#test-debug-custom-worker}
+# Test and debug a custom application {#test-debug-custom-worker}
 
-## Execute unit tests for a custom worker {#test-custom-worker}
+## Execute unit tests for a custom application {#test-custom-worker}
 
 Install [Docker Desktop](https://www.docker.com/get-started) on your machine. To test a custom worker, execute the following command at the root of the application:
 
@@ -14,22 +14,22 @@ $ aio app test
 ```
 
 <!-- TBD
-To run tests for a custom worker, run `adobe-asset-compute test-worker` command in the root of the custom worker application application.
+To run tests for a custom application, run `adobe-asset-compute test-worker` command in the root of the custom application application application.
 
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
 
-This runs a custom unit test framework for Asset Compute worker actions in the project as described below. It is hooked up through a configuration in the `package.json` file. It is also possible to have JavaScript unit tests such as Jest. `aio app test` executes both.
+This runs a custom unit test framework for Asset Compute application actions in the project as described below. It is hooked up through a configuration in the `package.json` file. It is also possible to have JavaScript unit tests such as Jest. `aio app test` executes both.
 
-The [aio-cli-plugin-asset-compute](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) plugin is embedded as development dependency in the custom worker app so that it doesn't need to be installed on build/test systems.
+The [aio-cli-plugin-asset-compute](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) plugin is embedded as development dependency in the custom application app so that it doesn't need to be installed on build/test systems.
 
-### Worker unit test framework {#unit-test-framework}
+### Application unit test framework {#unit-test-framework}
 
-The Asset Compute worker unit test framework allows to test workers without writing any code. It relies on the source to rendition file principle of workers. A certain file and folder structure has to be setup to define test cases with test source files, optional parameters, expected renditions and custom validation scripts. By default, the renditions are compared for byte equality. Furthermore, external HTTP services can be easily mocked using simple JSON files.
+The Asset Compute application unit test framework allows to test applications without writing any code. It relies on the source to rendition file principle of applications. A certain file and folder structure has to be setup to define test cases with test source files, optional parameters, expected renditions and custom validation scripts. By default, the renditions are compared for byte equality. Furthermore, external HTTP services can be easily mocked using simple JSON files.
 
 ### Add tests {#add-tests}
 
-Tests are expected inside the `test` folder at the root level of the AIO project. The test cases for each worker should be in the path `test/asset-compute/<worker-name>`, with one folder for each test case:
+Tests are expected inside the `test` folder at the root level of the AIO project. The test cases for each application should be in the path `test/asset-compute/<worker-name>`, with one folder for each test case:
 
 ```yaml
 action/
@@ -56,15 +56,15 @@ test/
             mock-console.adobe.io.json
 ```
 
-Have a look at [example custom workers](https://github.com/adobe/asset-compute-example-workers/) for some examples. Below is a detailed reference.
+Have a look at [example custom applications](https://github.com/adobe/asset-compute-example-workers/) for some examples. Below is a detailed reference.
 
 ### Test output {#test-output}
 
-The detailed test output including the logs of the custom worker are made available in the `build` folder at the root of the Firefly app as demonstrated in the `aio app test` output.
+The detailed test output including the logs of the custom application are made available in the `build` folder at the root of the Firefly app as demonstrated in the `aio app test` output.
 
 ### Mock external services {#mock-external-services}
 
-It is possible to mock external service calls in your actions by defining `mock-<HOST_NAME>.json` files in your test cases, where HOST_NAME is the host you would like to mock. An example use case is a worker that makes a separate call to S3. The new test structure would look like this:
+It is possible to mock external service calls in your actions by defining `mock-<HOST_NAME>.json` files in your test cases, where HOST_NAME is the host you would like to mock. An example use case is a application that makes a separate call to S3. The new test structure would look like this:
 
 ```json
 test/
@@ -152,9 +152,9 @@ See complete list and description of [Asset Compute error reasons](https://githu
 
 ## Debug a custom application {#debug-custom-worker}
 
-The following steps show how you can debug your custom worker using Visual Studio Code. It allows for seeing live logs, hit breakpoints and step through code as well as live reloading of local code changes upon every activation.
+The following steps show how you can debug your custom application using Visual Studio Code. It allows for seeing live logs, hit breakpoints and step through code as well as live reloading of local code changes upon every activation.
 
-Many of these steps are usually automated by `aio` out of the box, see section "Debugging the Application" in the [Firefly documentation](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). For now, the below steps include a workaround.
+Many of these steps are usually automated by `aio` out of the box, see section Debugging the Application in the [Firefly documentation](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). For now, the below steps include a workaround.
 
 1. Install the latest [wskdebug](https://github.com/apache/openwhisk-wskdebug) from GitHub and the optional [ngrok](https://www.npmjs.com/package/ngrok).
 
@@ -200,4 +200,4 @@ Any code changes are loaded in real-time and are effective as soon as the next a
 
 >[!NOTE]
 >
->Two activations are present for each request in custom workers. The first request is a web action that invokes itself asynchronously in the SDK code. The second activation is the one that hits your code.
+>Two activations are present for each request in custom applications. The first request is a web action that invokes itself asynchronously in the SDK code. The second activation is the one that hits your code.
