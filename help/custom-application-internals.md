@@ -3,11 +3,9 @@ title: Understand the working of a custom application.
 description: Internal working of [!DNL Asset Compute Service] custom application to help understand how it works.
 ---
 
-# Internals of a custom application {#how-customer-application-works}
+# Internals of a custom application {#how-custom-application-works}
 
-## Understand the workflow of a custom application {#understand-the-working}
-
-Use the following illustration to uUnderstand the end-to-end workflow when a digital asset is processed using a custom application of Adobe Asset Compute and a client.
+Use the following illustration to understand the end-to-end workflow when a digital asset is processed using a custom application by a client.
 
 ![Custom application workflow](assets/customworker.png)
 

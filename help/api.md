@@ -386,7 +386,7 @@ The Adobe I/O Event type for all events of the [!DNL Asset Compute Service] is `
 | `rendition_created` | Sent for each successfully processed and uploaded rendition. |
 | `rendition_failed`  | Sent for each rendition that failed to process or upload. |
 
-### Event attributes {#Event-attributes}
+### Event attributes {#event-attributes}
 
 | Attribute   | Type     | Event         | Description |
 |-------------|----------|---------------|-------------|

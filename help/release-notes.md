@@ -31,7 +31,7 @@ To test your custom application with the [developer tool](https://github.com/ado
 
 ## Contribute {#contribute-open-source}
 
-[!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe) that welcomes contributions from extension developers. All the components that are relevant to developing, building, and testing custom applications are open source. See [how and where to contribute to Compute Service](contribute-to-compute-service.md).
+[!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe) that welcomes contributions from extension developers. All the components that are relevant to develop, create, testing, and deploy custom applications are open source. See [how and where to contribute to Compute Service](contribute-to-compute-service.md).
 
 <!-- **TBD:**
 * Are we versioning the releases?
