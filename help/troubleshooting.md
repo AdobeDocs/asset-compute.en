@@ -3,9 +3,9 @@ title: Troubleshoot [!DNL Asset Compute Service].
 description: Troubleshoot and debug custom applications using [!DNL Asset Compute Service].
 ---
 
-# Troubleshoot {#troubleshooting}
+# Troubleshoot {#troubleshoot}
 
-## General troubleshooting tips {#general-troubleshooting-tips}
+A few generic troubleshooting tips that may help you troubleshoot with Asset Compute Service are:
 
 * Ensure that the JavaScript application does not crash on startup. Such crashes are usually related to a missing library or a dependency.
 * Ensure that all dependencies to be installed are referenced in the application's `package.json` file.
