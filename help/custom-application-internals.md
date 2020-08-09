@@ -11,7 +11,7 @@ Use the following illustration to understand the end-to-end workflow when a digi
 
 *Figure: Steps involved to process an Asset using [!DNL Asset Compute Service].*
 
-### Registration {#registration}
+## Registration {#registration}
 
 The client must call [`/register`](api.md#register) once before the first request to [`/process`](api.md#process-request) in order to set up and retrieve the journal URL for receiving Adobe I/O Events for Adobe Asset Compute.
 
@@ -26,7 +26,7 @@ curl -X POST \
 
 The [`@adobe/asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) JavaScript library can be used in NodeJS applications to handle all the necessary steps from registration, processing to asynchronous event handling. For more information on the required headers, see [Authentication and Authorization](api.md).
 
-### Processing {#processing}
+## Processing {#processing}
 
 The client sends a [processing](api.md#process-request) request.
 
@@ -68,7 +68,7 @@ The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-c
 
 <!-- TBD: Add the application diagram. -->
 
-#### Application code {#application-code}
+### Application code {#application-code}
 
 Custom code only needs to provide a callback that takes the locally available source file (`source.path`). The `rendition.path` is the location to place the final result of an asset processing request. The custom application uses the callback to turn the locally available source files into a rendition file using the name passed in (`rendition.path`). A custom application must write to `rendition.path` to create a rendition:
 
@@ -88,11 +88,11 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-#### Download source files {#download-source}
+### Download source files {#download-source}
 
 A custom application only deals with local files. Downloading the source file is handled by the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk).
 
-#### Rendition creation {#rendition-creation}
+### Rendition creation {#rendition-creation}
 
 The SDK invokes an asynchronous [rendition callback function](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) for each rendition.
 
@@ -102,17 +102,17 @@ The over simplification of the example is done to illustrate and focus on the an
 
 For more information about the rendition callback parameters, see [Asset Compute SDK API](https://github.com/adobe/asset-compute-sdk#api-details).
 
-#### Upload renditions {#upload-rendition}
+### Upload renditions {#upload-rendition}
 
 After each rendition is created and stored in a file with the path provided by `rendition.path`, the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) uploads each rendition to a cloud storage (either AWS or Azure). A custom application gets multiple renditions at the same time if, and only if, the incoming request has multiple renditions pointing to the same application URL. The upload to cloud storage is done after each rendition and before running the callback for the next rendition.
 
 The `batchWorker()` has a different behavior, as it actually process all renditions and only after all have been processed uploads those.
 
-### Adobe I/O Events {#aio-events}
+## Adobe I/O Events {#aio-events}
 
 The SDK sends Adobe I/O Events for each rendition. These events are either type `rendition_created` or `rendition_failed` depending on the outcome. See [Asset Compute asynchronous events](api.md#asynchronous-events) for events details.
 
-### Receive Adobe I/O Events {#receive-aio-events}
+## Receive Adobe I/O Events {#receive-aio-events}
 
 The client polls the [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) according to its consumption logic. The initial journal URL is the one provided in the `/register` API response. Events can be identified using the `requestId` that is present in the events and is the same as returned in `/process`. Every rendition has a separate event that gets sent as soon as the rendition has been uploaded (or failed). Once it receives a matching an event, the client can display or otherwise handle the resulting renditions.
 
