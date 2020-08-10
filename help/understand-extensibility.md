@@ -5,13 +5,13 @@ description: When and how to extend the [!DNL Asset Compute Service] functionali
 
 # Introduction to extensibility {#introduction-to-extensibilty}
 
-Many rendition requirements like converting to formats and resizing images are addressed by [Processing Profiles in [!DNL Experience Manager] as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html). More complex business requirements may need a custom-created solution that suits an organization's needs. [!DNL Asset Compute Service] can be extended by creating custom applications that are invoked from Processing Profiles in [!DNL Experience Manager] and that address the need for these [supported use cases](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+Many rendition requirements such as converting to formats and resizing images are addressed by [Processing Profiles in [!DNL Experience Manager] as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html). More complex business requirements may need a custom-created solution that suits an organization's needs. [!DNL Asset Compute Service] can be extended by creating custom applications that are invoked from Processing Profiles in [!DNL Experience Manager]. These custom applications cater to the [supported use cases](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
 >[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a Cloud Service.
 
-Extending [!DNL Asset Compute Service] with custom applications is made simple through the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) and Project Firefly developer tooling. This allows developers to focus on business logic. Creating custom applications is as simple as creating a plain serverless Adobe I/O Runtime action. It is a single Node.js JavaScript function. The [basic custom application example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrates it.
+The custom applications are headless [Project Firefly](https://github.com/AdobeDocs/project-firefly) apps. Extending [!DNL Asset Compute Service] with custom applications is made simple through the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) and Project Firefly developer tooling. This allows developers to focus on business logic. Creating custom applications is as simple as creating a plain serverless Adobe I/O Runtime action. It is a single Node.js JavaScript function. The [basic custom application example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrates it.
 
 ## Prerequisites and provisioning requirements {#prerequisites-and-provisioning}
 
