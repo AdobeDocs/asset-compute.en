@@ -56,7 +56,7 @@ Make sure to have the [Adobe I/O CLI](https://github.com/adobe/aio-cli) installe
 
     Read here about the [main components of a Firefly app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
 
-    The template application leverages our [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) for the uploading, downloading, and orchestration of application renditions so developers only need to implement the custom application logic. Inside the worker folder, the `index.js` file is where to add the custom application code.
+    The template application leverages our [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) for the uploading, downloading, and orchestration of application renditions so developers only need to implement the custom application logic. Inside the `actions/<worker-name>` folder, the `index.js` file is where to add the custom application code.
 
 See [example custom applications](#try-sample) for examples and ideas for custom applications.
 
