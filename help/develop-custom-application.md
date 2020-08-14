@@ -150,7 +150,7 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-### Invoke an external API {#call-external-api}
+## Invoke an external API {#call-external-api}
 
 In the application code, you can make external API calls to help with application processing. An example application file invoking external API is below.
 
@@ -199,11 +199,11 @@ exports.main = worker(async function (source, rendition) {
 
 The `example-worker-animal-pictures` passes a custom parameter [`animal`](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/worker-animal-pictures.js#L39) to determine which file to fetch from Wikimedia.
 
-### Authentication and authorization support {#authentication-authorization-support}
+## Authentication and authorization support {#authentication-authorization-support}
 
 By default, Asset Compute custom applications come with Authorization and Authentication checks for Firefly Applications. This is enabled by setting the `require-adobe-auth` annotation to `true` in the `manifest.yml`.
 
-#### Access other Adobe APIs {#access-adobe-apis}
+### Access other Adobe APIs {#access-adobe-apis}
 
 <!-- TBD: Revisit this section. Where do we document console workspace creation?
 -->
@@ -216,7 +216,7 @@ const clientId = params.auth.clientId; // Technical Account client Id
 const orgId = params.auth.orgId; // Experience Cloud Organization
 ```
 
-#### Pass credentials for third-party systems {#pass-credentials-for-tp}
+### Pass credentials for third-party systems {#pass-credentials-for-tp}
 
 To handle credentials for other external services, pass these as default parameters on the actions. These are automatically encrypted in transit. For more information, see [creating actions in Runtime developer guide](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/creating_actions.md). Then set them using environment variables during deployment. These parameters can be accessed in the `params` object inside the action.
 
@@ -251,7 +251,7 @@ For production deployment one might set the environment variables in the CI syst
 const key = params.secretKey;
 ```
 
-### Sizing applications {#sizing-workers}
+## Sizing applications {#sizing-workers}
 
 An application executes in a container in Adobe I/O Runtime with [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) that can be configured through the `manifest.yml`:
 
