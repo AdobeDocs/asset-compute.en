@@ -200,4 +200,4 @@ Any code changes are loaded in real-time and are effective as soon as the next a
 
 >[!NOTE]
 >
->Two activations are present for each request in custom applications. The first request is a web action that invokes itself asynchronously in the SDK code. The second activation is the one that hits your code.
+>Two activations are present for each request in custom applications. The first request is a web action that calls itself asynchronously in the SDK code. The second activation is the one that hits your code.
