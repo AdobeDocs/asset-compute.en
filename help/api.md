@@ -361,6 +361,7 @@ For a list of currently supported file formats, see [supported file formats](htt
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
 | `*`               | `*`      | Advanced, custom fields can be added that a [custom application](develop-custom-application.md) understands. | |
+| `embedBinaryLimit`           | `number` in bytes | If this value is set and the rendition's size is smaller than that value, the rendition will be embedded into the event sent once the rendition is done. The maximum size allowed for embedding is 32Kb: 32 * 1024 bytes. If the rendition is larger than that limit, it will be put at a location in cloud storage and will not be embedded in the event. | `3276` |
 | `width`           | `number` | Width in pixels. only for image renditions. | `200` |
 | `height`          | `number` | Height in pixels. only for image renditions. | `200` |
 |                   |          |  - if only `width` or `height` is specified, the resulting image uses that and keep the aspect ratio<br> - without `width` and `height`, the original image pixel size is used. It depends on the source type. For some formats, such as PDF files, a default size is used. | |
