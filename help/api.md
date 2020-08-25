@@ -9,7 +9,7 @@ The use of the API is limited to development purposes. The API is provided as a 
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a Cloud Service. 
+>[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a Cloud Service.
 
 Any client of the [!DNL Asset Compute Service] HTTP API must follow this high-level flow:
 
@@ -361,6 +361,7 @@ For a list of currently supported file formats, see [supported file formats](htt
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
 | `*`               | `*`      | Advanced, custom fields can be added that a [custom application](develop-custom-application.md) understands. | |
+| `embedBinaryLimit`| `number` in bytes | If this value is set and the rendition's file size is smaller than this value, the rendition is embedded in the event that is sent once the rendition generation is complete. The maximum size allowed for embedding is 32 KB (32 x 1024 bytes). If a rendition is larger in size than the `embedBinaryLimit` limit, it is be put at a location in cloud storage and is not embedded in the event. | `3276` |
 | `width`           | `number` | Width in pixels. only for image renditions. | `200` |
 | `height`          | `number` | Height in pixels. only for image renditions. | `200` |
 |                   |          |  - if only `width` or `height` is specified, the resulting image uses that and keep the aspect ratio<br> - without `width` and `height`, the original image pixel size is used. It depends on the source type. For some formats, such as PDF files, a default size is used. | |
