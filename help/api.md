@@ -134,7 +134,7 @@ The HTTP status codes are:
 
 ### Unregister request {#unregister-request}
 
-This API call unregisters an [!DNL Asset Compute] client. After this it is no longer possible to invoke `/process`. Using the API call for an unregistered client or a yet-to-be registered client returns a `404` error.
+This API call unregisters an [!DNL Asset Compute] client. After this it is no longer possible to call `/process`. Using the API call for an unregistered client or a yet-to-be registered client returns a `404` error.
 
 | Parameter                | Value                                                |
 |--------------------------|------------------------------------------------------|

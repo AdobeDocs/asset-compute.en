@@ -121,7 +121,7 @@ To run the application in the developer tool, use `aio app run` command. It depl
 
 >[!NOTE]
 >
->Do not use the `--local` flag with the `run` command. It does not work with [!DNL Asset Compute] custom applications and the Asset Compute Developer tool. Custom applications are invoked by the [!DNL Asset Compute Service] which cannot access actions running on developer's local machines.
+>Do not use the `--local` flag with the `run` command. It does not work with [!DNL Asset Compute] custom applications and the Asset Compute Developer tool. Custom applications are called by the [!DNL Asset Compute Service] which cannot access actions running on developer's local machines.
 
 See [here](test-custom-application.md) how to test and debug your application. When you are finished developing your custom application, [deploy your custom application](deploy-custom-application.md).
 
@@ -150,7 +150,7 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-## Invoke an external API {#call-external-api}
+## Call an external API {#call-external-api}
 
 In the application code, you can make external API calls to help with application processing. An example application file invoking external API is below.
 
