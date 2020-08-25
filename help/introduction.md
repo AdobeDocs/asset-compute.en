@@ -13,7 +13,7 @@ Developers can plugin custom asset applications (also called custom workers) to 
 
 >[!NOTE]
 >
->Currently, the [!DNL Asset Compute Service] can be used only via [!DNL Experience Manager] as a Cloud Service. Administrators create processing profiles that can invoke the [!DNL Asset Compute Service] to pass assets for processing. See [use asset microservices and processing profiles](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>Currently, the [!DNL Asset Compute Service] can be used only via [!DNL Experience Manager] as a Cloud Service. Administrators create processing profiles that can call the [!DNL Asset Compute Service] to pass assets for processing. See [use asset microservices and processing profiles](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Supported use cases of [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
