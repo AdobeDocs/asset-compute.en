@@ -3,7 +3,7 @@ title: Develop for [!DNL Asset Compute Service].
 description: Create custom applications using [!DNL Asset Compute Service].
 ---
 
-# Develop a custom applications {#develop}
+# Develop a custom application {#develop}
 
 Before you begin to develop a custom application:
 
