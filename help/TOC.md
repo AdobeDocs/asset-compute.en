@@ -2,8 +2,10 @@
 cloud: experience-cloud
 product: Asset Compute Service
 audience: end-user
-user-guide-title: Asset Compute Service Help
+user-guide-title: Asset Compute Service Guide
+user-guide-description: This documentation covers [!DNL Asset Compute Service] tasks such as how to develop, manage, deploy, and troubleshoot your custom code.
 breadcrumb-title: Asset Compute Service Guide
+breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: AEM Assets
 solution-hub-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/home.html
 getting-started-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html
