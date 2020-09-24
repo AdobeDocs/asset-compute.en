@@ -150,6 +150,19 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
+## Rendition post-processing {#rendition-post-processing}
+
+[Adobe Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) supports post-processing of renditions. It is based on the instructions defined in the rendition object. This post-processing is available to any custom application, as it is done using the SDK.
+
+The supported use cases are:
+
+* Crop a rendition to a rectangle whose limits are defined by crop.w, crop.h, crop.x and crop.y. It is defined by `instructions.crop` in the rendition object.
+* Resize images using width, height, or both. It is defined by `instructions.width` and `instructions.height` in the rendition object. To resize using only width or height, set only one value. Compute Service conserves the aspect ratio.
+* Set the quality for a JPEG image. It is defined by `instructions.quality` in the rendition object. The best quality is denoted by `100` and smaller values indicate reduced quality.
+* Create interlaced images. It is defined by `instructions.interlace` in the rendition object.
+* Set DPI to adjust the rendered size for desktop publishing purposes by adjusting the scale applied to the pixels. It is defined by `instructions.dpi` in the rendition object to change dpi resolution. However, to resize the image so that it is the same size at a different resolution, use the `convertToDpi` instructions.
+* Resize the image such that its rendered width or height remains the same as the original at the specified target resolution (DPI). It is defined by `instructions.convertToDpi` in the rendition object.
+
 ## Call an external API {#call-external-api}
 
 In the application code, you can make external API calls to help with application processing. An example application file invoking external API is below.
