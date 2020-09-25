@@ -340,6 +340,25 @@ Most clients are likely inclined to retry the exact same request with [exponenti
 
 All JSON responses (if present) include the `requestId` which is the same value as the `X-Request-Id` header. It is recommended to read from the header, since it is always present. The `requestId` is also returned in all events related to processing requests as `requestId`. Clients must not make any assumption about the format of this string, it is an opaque string identifier.
 
+## Opt-in to post-processing {#opt-in-to-post-processing}
+
+The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) supports a set of basic image post-processing options. Custom workers can explicitly opt in to post-processing by setting the field `postProcess` on the rendition object to `true`.
+
+The supported use cases are:
+
+* Crop a rendition to a rectangle whose limits are defined by crop.w, crop.h, crop.x, and crop.y. It is defined by `instructions.crop` in the rendition object.
+* Resize images using width, height, or both. It is defined by `instructions.width` and `instructions.height` in the rendition object. To resize using only width or height, set only one value. Compute Service conserves the aspect ratio.
+* Set the quality for a JPEG image. It is defined by `instructions.quality` in the rendition object. The best quality is denoted by `100` and smaller values indicate reduced quality.
+* Create interlaced images. It is defined by `instructions.interlace` in the rendition object.
+* Set DPI to adjust the rendered size for desktop publishing purposes by adjusting the scale applied to the pixels. It is defined by `instructions.dpi` in the rendition object to change dpi resolution. However, to resize the image so that it is the same size at a different resolution, use the `convertToDpi` instructions.
+* Resize the image such that its rendered width or height remains the same as the original at the specified target resolution (DPI). It is defined by `instructions.convertToDpi` in the rendition object.
+
+## Watermark assets {#add-watermark}
+
+The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) supports adding a watermark to PNG, JPEG, TIFF, and GIF image files. The watermark is added following the rendition instructions in the `watermark` object on the rendition.
+
+Watermarking is done during rendition post-processing. To watermark assets, the custom worker [opts into post-processing](#opt-in-to-post-processing) by setting the field `postProcess` on the rendition object to `true`. If the worker does not opt-in then watermarking does not applied, even if the watermark object is set on the rendition object in the request.
+
 ## Rendition instructions {#rendition-instructions}
 
 These are the available options for the `renditions` array in [/process](#process-request).
@@ -373,6 +392,16 @@ For a list of currently supported file formats, see [supported file formats](htt
 | `convertToDpi`    | `number` or `object` | x and y DPI re-sample values while maintaining physical size. For simplicity, it can also be set to a single number which is used for both x and y. | `96` or `{ xdpi: 96, ydpi: 96 }` |
 | `files`           | `array`  | List of files to include in the ZIP archive (`fmt=zip`). Each entry can either be a URL string or an object with the fields:<ul><li>`url`: URL to download file</li><li>`path`: Store file under this path in the ZIP</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
 | `duplicate`       | `string` | Duplicate handling for ZIP archives (`fmt=zip`). By default multiple files stored under the same path in the ZIP generates an error. Setting `duplicate` to `ignore` results in only the first asset to be stored and the rest to be ignored. | `ignore` |
+| `watermark`       | `object` | Contains instructions about the [watermark](#watermark-specific-fields). |  |
+
+### Watermark-specific fields {#watermark-specific-fields}
+
+PNG format is used as a watermark.
+
+| Name              | Type     | Description | Example |
+|-------------------|----------|-------------|---------|
+| `scale`           | `number` | Scale of the watermark, between `0.0` and `1.0`. `1.0` means the watermark has its original scale (1:1) and the lower values reduce the watermark size. | A value of `0.5` means half of original size. |
+|`image`| `url` | URL to the PNG file to use to watermark. | |
 
 ## Asynchronous events {#asynchronous-events}
 
