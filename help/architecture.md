@@ -19,8 +19,6 @@ The foundation on which the architecture is based includes:
 
 * Binary cloud storage provides the necessary features for storing and accessing asset files and renditions individually, without requiring full access permissions to the storage, using pre-signed URL references. Transfer acceleration, CDN caching, and co-locating compute applications with cloud storage allow for optimal low latency content access. Both AWS and Azure clouds are supported.
 
-The architecture is compatible with Adobe Experience Data Model (XDM) Schema that ensures forward and backward compatibility.[`xmp:machineKeywords`](https://github.com/adobe/xdm/blob/master/docs/reference/assets/asset.schema.md#xmpmachinekeywords) tracks Adobe Sensei-assigned descriptive phrases such as keywords or tags of a supported asset.
-
 ![Architecture of Asset Compute Service](assets/architecture-diagram.png)
 
 *Figure: Architecture of [!DNL Asset Compute Service] and how it integrates with [!DNL Experience Manager], storage, and processing application.*
