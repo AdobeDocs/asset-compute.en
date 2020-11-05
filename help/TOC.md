@@ -1,6 +1,8 @@
 ---
 cloud: experience-cloud
 product: Asset Compute Service
+solution: Experience Manager
+type: Documentation
 audience: end-user
 user-guide-title: Asset Compute Service Guide
 user-guide-description: This documentation covers [!DNL Asset Compute Service] tasks such as how to develop, manage, deploy, and troubleshoot your custom code.
