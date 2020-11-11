@@ -13,13 +13,13 @@ Developers can plugin custom asset applications (also called custom workers) to 
 
 >[!NOTE]
 >
->Currently, the [!DNL Asset Compute Service] can be used only via [!DNL Experience Manager] as a Cloud Service. Administrators create processing profiles that can call the [!DNL Asset Compute Service] to pass assets for processing. See [use asset microservices and processing profiles](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>Currently, the [!DNL Asset Compute Service] can be used only via [!DNL Experience Manager] as a Cloud Service. Administrators create processing profiles that can call the [!DNL Asset Compute Service] to pass assets for processing. See [use asset microservices and processing profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Supported use cases of [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
 [!DNL Asset Compute Service] supports a few common business use cases like basic image processing; Adobe application specific conversions; and custom applications creation that orchestrate complex business requirements.
 
-You can use [!DNL Asset Compute] web service to generate thumbnails for different file types, high-quality image renderings for the [supported file formats](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html). See [use cases supported via custom configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#custom-config).
+You can use [!DNL Asset Compute] web service to generate thumbnails for different file types, high-quality image renderings for the [supported file formats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html). See [use cases supported via custom configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -38,9 +38,9 @@ You can use [!DNL Asset Compute] web service to generate thumbnails for differen
 
 >[!MORELIKETHIS]
 >
->* [Overview of asset processing with asset microservices in Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Overview of asset processing with asset microservices in Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Documentation of Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
->* [File formats supported for processing](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
+>* [File formats supported for processing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 >* [Release notes of the Asset Compute Service](release-notes.md)
 
 <!-- **TBD:**
