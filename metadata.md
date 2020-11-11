@@ -1,12 +1,12 @@
 ---
 cloud: experience-cloud
 solution-title: Asset Compute Service
-solution-hub-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 solution-icon: assets/experience-cloud-logo-24.png
 getting-started-title: Getting Started
-getting-started-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html
+getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 tutorials-title: Tutorials
-tutorials-url: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/overview.html
+tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/asset-compute.en
 index: y

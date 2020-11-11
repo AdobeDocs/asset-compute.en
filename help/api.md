@@ -5,7 +5,7 @@ description: [!DNL Asset Compute Service] HTTP API to create custom applications
 
 # [!DNL Asset Compute Service] HTTP API {#asset-compute-http-api}
 
-The use of the API is limited to development purposes. The API is provided as a context when developing custom applications. [!DNL Adobe Experience Manager] as a Cloud Service uses the API to pass the processing information to a custom application. For more information, see [Use asset microservices and Processing Profiles](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+The use of the API is limited to development purposes. The API is provided as a context when developing custom applications. [!DNL Adobe Experience Manager] as a Cloud Service uses the API to pass the processing information to a custom application. For more information, see [Use asset microservices and Processing Profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -367,7 +367,7 @@ These are the available options for the `renditions` array in [/process](#proces
 
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
-| `fmt`             | `string` | The renditions target format, can also be `text` for text extraction and `xmp` for extracting XMP metadata as xml. See [supported formats](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
+| `fmt`             | `string` | The renditions target format, can also be `text` for text extraction and `xmp` for extracting XMP metadata as xml. See [supported formats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker`          | `string` | URL of a [custom application](develop-custom-application.md). Must be an `https://` URL. If this field is present, the rendition is created by a custom application. Any other set rendition field is then used in the custom application. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL to which the generated rendition should be uploaded using HTTP PUT. | `http://w.com/img.jpg` |
 | `target`          | `object` | Multipart pre-signed URL upload information for the generated rendition. This is for [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) with this [multipart upload behavior](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array of strings, one for each pre-signed part URL</li><li>`minPartSize`: the minimum size to use for one part = url</li><li>`maxPartSize`: the maximum size to use for one part = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
@@ -375,7 +375,7 @@ These are the available options for the `renditions` array in [/process](#proces
 
 ### Rendition specific fields {#rendition-specific-fields}
 
-For a list of currently supported file formats, see [supported file formats](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
+For a list of currently supported file formats, see [supported file formats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
