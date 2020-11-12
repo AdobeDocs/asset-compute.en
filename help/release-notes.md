@@ -20,7 +20,7 @@ To test your custom applications with the [developer tool](https://github.com/ad
 
 This is the first release of [!DNL Asset Compute Service]. It is a scalable and extensible service of [!DNL Adobe Experience Cloud] to process digital assets. It can transform image, video, document, and other file formats into different renditions including thumbnails, extracted text and metadata, and archives.
 
-Currently, the [!DNL Asset Compute Service] can only be used in [!DNL Experience Manager] as a Cloud Service.
+Currently, the [!DNL Asset Compute Service] can only be used in [!DNL Experience Manager] as a [!DNL Cloud Service].
 
 ## Limitations and known issues {#known-limitations}
 
