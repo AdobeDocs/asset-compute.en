@@ -30,6 +30,6 @@ tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/
   + [Develop a custom application](develop-custom-application.md)
   + [Test a custom application](test-custom-application.md)
   + [Deploy a custom application](deploy-custom-application.md)
-  + [Integrate and use in Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+  + [Integrate and use in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
 + [Troubleshoot](troubleshooting.md)
 + [Contribute to the open-source project](contribute-to-compute-service.md)
