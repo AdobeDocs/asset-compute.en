@@ -13,7 +13,7 @@ This documentation covers [!DNL Asset Compute Service] topics such as how to dev
 
 For release-related information and what is the latest, see the [release notes](/help/release-notes.md).
 
-See an overview about [asset microservices capabilities available in Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) and how to use the microservices in [!DNL Experience Manager].
+See an overview about [asset microservices capabilities available in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) and how to use the microservices in [!DNL Experience Manager].
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?

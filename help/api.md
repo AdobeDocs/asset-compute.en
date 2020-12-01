@@ -5,11 +5,11 @@ description: [!DNL Asset Compute Service] HTTP API to create custom applications
 
 # [!DNL Asset Compute Service] HTTP API {#asset-compute-http-api}
 
-The use of the API is limited to development purposes. The API is provided as a context when developing custom applications. [!DNL Adobe Experience Manager] as a Cloud Service uses the API to pass the processing information to a custom application. For more information, see [Use asset microservices and Processing Profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+The use of the API is limited to development purposes. The API is provided as a context when developing custom applications. [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] uses the API to pass the processing information to a custom application. For more information, see [Use asset microservices and Processing Profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a Cloud Service.
+>[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a [!DNL Cloud Service].
 
 Any client of the [!DNL Asset Compute Service] HTTP API must follow this high-level flow:
 

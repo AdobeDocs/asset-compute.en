@@ -75,7 +75,7 @@ The developer tool used to test custom applications with the actual [!DNL Asset 
 
    >[!NOTE]
    >
-   >This is separate from the cloud storage of [!DNL Adobe Experience Manager] as a Cloud Service. It only applies for developing and testing with the Asset Compute developer tool.
+   >This is separate from the cloud storage of [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]. It only applies for developing and testing with the Asset Compute developer tool.
 
 Make sure to have access to a [supported cloud storage container](https://github.com/adobe/asset-compute-devtool#prerequisites). This container can be shared by multiple developers across different projects as needed.
 

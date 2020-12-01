@@ -5,7 +5,7 @@ description: How [!DNL Asset Compute Service] API, applications, and SDK work to
 
 # Architecture of [!DNL Asset Compute Service] {#overview}
 
-The [!DNL Asset Compute Service] is built on top of serverless Adobe I/O Runtime platform. It provides Adobe Sensei content services support for assets. The invoking client (only [!DNL Experience Manager] as a Cloud Service is supported) is provided with the Adobe Sensei-generated information that it sought for the asset. The information returned is in JSON format.
+The [!DNL Asset Compute Service] is built on top of serverless Adobe I/O Runtime platform. It provides Adobe Sensei content services support for assets. The invoking client (only [!DNL Experience Manager] as a [!DNL Cloud Service] is supported) is provided with the Adobe Sensei-generated information that it sought for the asset. The information returned is in JSON format.
 
 [!DNL Asset Compute Service] is extendable by creating custom applications based on [!DNL Project Firefly]. These custom applications are [!DNL Project Firefly] headless apps and do tasks such as add custom conversion tools or call external APIs to perform image operations.
 
