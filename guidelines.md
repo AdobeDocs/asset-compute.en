@@ -24,7 +24,7 @@ Exceptions to this rule is release notes where known issues can be listed with p
 
 Any ideas you may have to improve the documentation are welcome as contributions. However comments, issues, and pull requests are intended for *contributions* only. They are not intended to be used to answer your questions about how to use the product, implement projects, or solve technical issues.
 
-Any questions about the usage or technical errors you may have should be reported through the normal support process via the [Experience Cloud Enterprise Support portal](https://helpx.adobe.com/contact/enterprise-support.ec.html) or discussed in the [Experience Manager community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Any questions about the usage or technical errors you may have should be reported through the normal support process via the [[!DNL Experience Cloud] Enterprise Support portal](https://helpx.adobe.com/contact/enterprise-support.ec.html) or discussed in the [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 The documentation contributions are not a replacement for Adobe Customer Care*** and any such contributions seeking answers to support-related questions will be rejected.
 

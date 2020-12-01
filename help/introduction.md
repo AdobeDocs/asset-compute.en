@@ -38,7 +38,7 @@ You can use [!DNL Asset Compute] web service to generate thumbnails for differen
 
 >[!MORELIKETHIS]
 >
->* [Overview of asset processing with asset microservices in Adobe Experience Manager as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Overview of asset processing with asset microservices in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Documentation of Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [File formats supported for processing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 >* [Release notes of the Asset Compute Service](release-notes.md)
