@@ -25,7 +25,7 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
 
 1. Be granted System Admin or Developer Role access in the Experience Organization. This can be set by a System Admin in the [Admin Console](https://adminconsole.adobe.com/overview).
 
-1. Log onto the [Adobe Developer Console](https://console.adobe.io/). Ensure you are part of the same Adobe Experience Cloud Organization as the AEM as a [!DNL Cloud Service] integration. For more information about Adobe Developer Console, see [Console documentation](https://www.adobe.io/apis/experienceplatform/console/docs.html).
+1. Log onto the [Adobe Developer Console](https://console.adobe.io/). Ensure you are part of the same Adobe Experience Cloud Organization as the [!DNL Experience Manager] as a [!DNL Cloud Service] integration. For more information about Adobe Developer Console, see [Console documentation](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
 1. [Create a Firefly project](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Click **[!UICONTROL Create new project]** > **[!UICONTROL Project from template]**. Select Firefly. It creates a new Firefly Project with two workspaces: `Production` and `Stage`. Add additional workspaces, for example `Development`, as required.
 
