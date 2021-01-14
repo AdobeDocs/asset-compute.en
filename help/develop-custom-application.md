@@ -32,7 +32,7 @@ Make sure to have the [Adobe I/O CLI](https://github.com/adobe/aio-cli) installe
     create console.json
     ```
 
-1. When prompted with `Which Adobe I/O App features do you want to enable for this project?`, select at least `Actions`:
+1. When prompted with `Which Adobe I/O App features do you want to enable for this project?`, select `Actions`. Make sure to deselect `Web Assets` option as web assets use different authentication and authorization checks.
 
     ```bash
     ? Which Adobe I/O App features do you want to enable for this project?
