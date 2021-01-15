@@ -29,7 +29,7 @@ The Asset Compute application unit test framework allows to test applications wi
 
 ### Add tests {#add-tests}
 
-Tests are expected inside the `test` folder at the root level of the AIO project. The test cases for each application should be in the path `test/asset-compute/<worker-name>`, with one folder for each test case:
+Tests are expected inside the `test` folder at the root level of the [!DNL Adobe I/O] project. The test cases for each application should be in the path `test/asset-compute/<worker-name>`, with one folder for each test case:
 
 ```yaml
 action/

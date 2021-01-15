@@ -275,7 +275,7 @@ Due to the more extensive processing typically done by Asset Compute application
 
 The default timeout for actions in Runtime is a minute but it can be increased by setting the `timeout` limit (in milliseconds). If you expect to process larger files, increase this time. Consider the total time it takes to download the source, process the file and upload the rendition. If an action times out, i.e. does not return the activation before the specified timeout limit, Runtime discards the container and not reuse it.
 
-Asset compute applications by nature tend to be network and disk IO bound. The source file has to be downloaded first, processing is often IO heavy and then resulting renditions are uploaded again.
+Asset compute applications by nature tend to be network and disk Input or output bound. The source file has to be downloaded first, processing is often resource-intensive and then the resulting renditions are uploaded again.
 
 The memory available to an action container is specified by `memorySize` in MB. Currently this also defines how much CPU access the container gets, and most importantly it is a key element of the cost of using Runtime (larger containers cost more). Use a larger value here when your processing requires more memory or CPU but be careful to not waste resources as the larger the containers are, the lower the overall throughput is.
 
