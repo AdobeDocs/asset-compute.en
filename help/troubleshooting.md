@@ -12,7 +12,7 @@ A few generic troubleshooting tips that may help you troubleshoot with Asset Com
 * Ensure any errors that may come from cleanup on failure don't generate their own errors that hide the original problem.
 
 * When starting the developer tool for the first time with a new [!DNL Asset Compute Service] integration, it may fail the first processing request because the Asset Compute Events Journal may not be completely set up. Wait for some time for the journal to set up before sending another request.
-* If you run into errors sending Asset Compute `/register` or `/process` requests, make sure that all the necessary APIs are added to the [!DNL Adobe I/O] Project and Workspace&mdash;that is, Asset Compute, IO Events, IO Events Management, and Runtime.
+* If you run into errors sending Asset Compute `/register` or `/process` requests, make sure that all the necessary APIs are added to the [!DNL Adobe I/O] Project and Workspace&mdash;that is, Asset Compute, [!DNL Adobe I/O] Events, [!DNL Adobe I/O] Events Management, and [!DNL Adobe I/O] Runtime.
 
 ## Log in issues via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
