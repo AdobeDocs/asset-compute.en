@@ -15,11 +15,11 @@ For detailed guidelines, see the [contribution guidelines](https://github.com/ad
 
 ## Available resources and libraries {#available-resources}
 
-See this list of [open-sourced libraries](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) for [!DNL Asset Compute Service]. In addition, the available Adobe I/O Runtime and OpenWhisk resources are:
+See this list of [open-sourced libraries](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) for [!DNL Asset Compute Service]. In addition, the available [!DNL Adobe I/O] Runtime and OpenWhisk resources are:
 
 * [Get started with Apache OpenWhisk](https://github.com/apache/incubator-openwhisk/tree/master/docs#getting-started-with-openwhisk).
-* [Lab: Build composable AI with Adobe Sensei functions and Adobe I/O Runtime](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
-* [Adobe I/O Runtime FAQ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
+* [Lab: Build composable AI with [!DNL Adobe Sensei] functions and [!DNL Adobe I/O] Runtime](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
+* [[!DNL Adobe I/O] Runtime FAQ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
 
 <!-- **TBD** for post-release:
 * Link to Firefly open-source components.
