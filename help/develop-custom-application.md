@@ -13,7 +13,7 @@ Before you begin to develop a custom application:
 
 ## Create a custom application {#create-custom-application}
 
-Make sure to have the [Adobe I/O CLI](https://github.com/adobe/aio-cli) installed locally.
+Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) installed locally.
 
 1. To create a custom application, [create a Firefly app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). To do so, execute `aio app init <app-name>` in your terminal.
 
@@ -25,7 +25,7 @@ Make sure to have the [Adobe I/O CLI](https://github.com/adobe/aio-cli) installe
 
     ```sh
     $ aio app init <app-name>
-    Retrieving information from Adobe I/O Console..
+    Retrieving information from [!DNL Adobe I/O] Console.
     ? Select Org My Adobe Org
     ? Select Project MyFireflyProject
     ? Select Workspace myworkspace
@@ -114,7 +114,7 @@ Add the following credentials for the developer tool to the ENV file in the root
 
 Before executing the application with the Asset Compute Developer Tool, properly configure the [credentials](#developer-tool-credentials).
 
-To run the application in the developer tool, use `aio app run` command. It deploys the action to Adobe I/O Runtime and start the development tool on your local machine. This tool is used to test application requests during development. Here is an example rendition request:
+To run the application in the developer tool, use `aio app run` command. It deploys the action to [!DNL Adobe I/O] Runtime and start the development tool on your local machine. This tool is used to test application requests during development. Here is an example rendition request:
 
 ```json
 "renditions": [
@@ -259,7 +259,7 @@ const key = params.secretKey;
 
 ## Sizing applications {#sizing-workers}
 
-An application executes in a container in Adobe I/O Runtime with [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) that can be configured through the `manifest.yml`:
+An application executes in a container in [!DNL Adobe I/O] Runtime with [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) that can be configured through the `manifest.yml`:
 
 ```yaml
     actions:

@@ -13,7 +13,7 @@ Use the following illustration to understand the end-to-end workflow when a digi
 
 ## Registration {#registration}
 
-The client must call [`/register`](api.md#register) once before the first request to [`/process`](api.md#process-request) in order to set up and retrieve the journal URL for receiving Adobe I/O Events for Adobe Asset Compute.
+The client must call [`/register`](api.md#register) once before the first request to [`/process`](api.md#process-request) in order to set up and retrieve the journal URL for receiving [!DNL Adobe I/O] Events for Adobe Asset Compute.
 
 ```sh
 curl -X POST \
@@ -42,7 +42,7 @@ curl -X POST \
 
 The client is responsible for correctly formatting the renditions with pre-signed URLs. The [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) JavaScript library can be used in NodeJS applications to pre-sign URLs. Currently the library only supports Azure Blob Storage and AWS S3 Containers.
 
-The processing request returns a `requestId` that can be used for polling Adobe I/O Events.
+The processing request returns a `requestId` that can be used for polling [!DNL Adobe I/O] Events.
 
 A sample custom application processing request is below.
 
@@ -64,7 +64,7 @@ A sample custom application processing request is below.
 
 The [!DNL Asset Compute Service] sends the custom application rendition requests to the custom application. It uses an HTTP POST to the provided application URL, which is the secured web action URL from Project Firefly. All requests use the HTTPS protocol to maximize data security.
 
-The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) used by a custom application handles the HTTP POST request. It also handles downloading of the source, uploading renditions, sending I/O events and error handling.
+The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) used by a custom application handles the HTTP POST request. It also handles downloading of the source, uploading renditions, sending [!DNL Adobe I/O] events and error handling.
 
 <!-- TBD: Add the application diagram. -->
 
@@ -108,13 +108,13 @@ After each rendition is created and stored in a file with the path provided by `
 
 The `batchWorker()` has a different behavior, as it actually process all renditions and only after all have been processed uploads those.
 
-## Adobe I/O Events {#aio-events}
+## [!DNL Adobe I/O] Events {#aio-events}
 
-The SDK sends Adobe I/O Events for each rendition. These events are either type `rendition_created` or `rendition_failed` depending on the outcome. See [Asset Compute asynchronous events](api.md#asynchronous-events) for events details.
+The SDK sends [!DNL Adobe I/O] Events for each rendition. These events are either type `rendition_created` or `rendition_failed` depending on the outcome. See [Asset Compute asynchronous events](api.md#asynchronous-events) for events details.
 
-## Receive Adobe I/O Events {#receive-aio-events}
+## Receive [!DNL Adobe I/O] Events {#receive-aio-events}
 
-The client polls the [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) according to its consumption logic. The initial journal URL is the one provided in the `/register` API response. Events can be identified using the `requestId` that is present in the events and is the same as returned in `/process`. Every rendition has a separate event that gets sent as soon as the rendition has been uploaded (or failed). Once it receives a matching an event, the client can display or otherwise handle the resulting renditions.
+The client polls the [[!DNL Adobe I/O] Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) according to its consumption logic. The initial journal URL is the one provided in the `/register` API response. Events can be identified using the `requestId` that is present in the events and is the same as returned in `/process`. Every rendition has a separate event that gets sent as soon as the rendition has been uploaded (or failed). Once it receives a matching an event, the client can display or otherwise handle the resulting renditions.
 
 The JavaScript library [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) makes the journal polling simple using the `waitActivation()` method to get all the events.
 
@@ -134,7 +134,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-For details on how to get journal events, see [Adobe I/O Events API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
+For details on how to get journal events, see [[!DNL Adobe I/O] Events API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
 
 <!-- TBD:
 * Illustration of the controls/data flow.

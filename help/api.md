@@ -61,11 +61,11 @@ These require the [!DNL Adobe Developer Console] project to be subscribed to `As
   * metascope: `asset_compute_meta`
   * scopes: `asset_compute,read_organizations`
 
-* Adobe I/O Events
+* [!DNL Adobe I/O] Events
   * metascope: `event_receiver_api`
   * scopes: `event_receiver,event_receiver_api`
 
-* Adobe I/O Management API
+* [!DNL Adobe I/O] Management API
   * metascope: `ent_adobeio_sdk`
   * scopes: `adobeio_api,additional_info.roles,additional_info.projectedProductContext`
 
@@ -405,9 +405,9 @@ PNG format is used as a watermark.
 
 ## Asynchronous events {#asynchronous-events}
 
-Once processing of a rendition is finished or when an error occurs, an event is sent to an [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). Clients must listen to the journal URL provided through [/register](#register). The journal response includes an `event` array consisting of one object for each event, of which the `event` field includes the actual event payload.
+Once processing of a rendition is finished or when an error occurs, an event is sent to an [[!DNL Adobe I/O] Events Journal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). Clients must listen to the journal URL provided through [/register](#register). The journal response includes an `event` array consisting of one object for each event, of which the `event` field includes the actual event payload.
 
-The Adobe I/O Event type for all events of the [!DNL Asset Compute Service] is `asset_compute`. The journal is automatically subscribed to this event type only and there is no further requirement to filter based on the Adobe I/O Event type. The service specific event types are available in the `type` property of the event.
+The [!DNL Adobe I/O] Event type for all events of the [!DNL Asset Compute Service] is `asset_compute`. The journal is automatically subscribed to this event type only and there is no further requirement to filter based on the [!DNL Adobe I/O] Event type. The service specific event types are available in the `type` property of the event.
 
 ### Event types {#event-types}
 

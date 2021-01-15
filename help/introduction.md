@@ -32,7 +32,7 @@ You can use [!DNL Asset Compute] web service to generate thumbnails for differen
 | Binary uploads or API-based asset ingestion. | Use other methods to ingest assets. |
 | Store binaries or any persisted data across processing requests.| Each request is independent so treat it as a standalone request by sharing binary and processing instructions. |
 | Store any configurations such as processing rules or settings for a user or an organization's account. | Add processing request to each request/instruction. |
-| Direct event handling of asset creation events from storage systems and processing completed notifications, and errors. | Use Adobe I/O Events and other methods. |
+| Direct event handling of asset creation events from storage systems and processing completed notifications, and errors. | Use [!DNL Adobe I/O] Events and other methods. |
 
 -->
 

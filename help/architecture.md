@@ -5,7 +5,7 @@ description: How [!DNL Asset Compute Service] API, applications, and SDK work to
 
 # Architecture of [!DNL Asset Compute Service] {#overview}
 
-The [!DNL Asset Compute Service] is built on top of serverless Adobe I/O Runtime platform. It provides Adobe Sensei content services support for assets. The invoking client (only [!DNL Experience Manager] as a [!DNL Cloud Service] is supported) is provided with the Adobe Sensei-generated information that it sought for the asset. The information returned is in JSON format.
+The [!DNL Asset Compute Service] is built on top of serverless [!DNL Adobe I/O] Runtime platform. It provides Adobe Sensei content services support for assets. The invoking client (only [!DNL Experience Manager] as a [!DNL Cloud Service] is supported) is provided with the Adobe Sensei-generated information that it sought for the asset. The information returned is in JSON format.
 
 [!DNL Asset Compute Service] is extendable by creating custom applications based on [!DNL Project Firefly]. These custom applications are [!DNL Project Firefly] headless apps and do tasks such as add custom conversion tools or call external APIs to perform image operations.
 
@@ -15,7 +15,7 @@ The foundation on which the architecture is based includes:
 
 * The modularity of applications – only containing what is needed for a given task – allows to decouple applications from each other and keep them lightweight.
 
-* The serverless concept of Adobe I/O Runtime yields numerous benefits: asynchronous, highly scalable, isolated, job-based processing, which is a perfect fit for asset processing.
+* The serverless concept of [!DNL Adobe I/O] Runtime yields numerous benefits: asynchronous, highly scalable, isolated, job-based processing, which is a perfect fit for asset processing.
 
 * Binary cloud storage provides the necessary features for storing and accessing asset files and renditions individually, without requiring full access permissions to the storage, using pre-signed URL references. Transfer acceleration, CDN caching, and co-locating compute applications with cloud storage allow for optimal low latency content access. Both AWS and Azure clouds are supported.
 
@@ -25,7 +25,7 @@ The foundation on which the architecture is based includes:
 
 The architecture consists of the following parts:
 
-* **An API and orchestration layer** receives requests (in JSON format) which instruct the service to transform a source asset into multiple renditions. These requests are asynchronous and return with an activation id (aka "job id"). Instructions are purely declarative, and for all standard processing work (e.g. thumbnail generation, text extraction) consumers only specify the desired result, but not the applications that handle certain renditions. Generic API features such as authentication, analytics, rate limiting, are handled using the Adobe API Gateway in front of the service and manages all requests going to I/O Runtime. The application routing is done dynamically by the orchestration layer. Custom application can be specified by clients for specific renditions and include custom parameters. Application execution can be fully parallelized as they are separate serverless functions in I/O Runtime.
+* **An API and orchestration layer** receives requests (in JSON format) which instruct the service to transform a source asset into multiple renditions. The requests are asynchronous and return with an activation ID, that is job ID. Instructions are purely declarative, and for all standard processing work (e.g. thumbnail generation, text extraction) consumers only specify the desired result, but not the applications that handle certain renditions. Generic API features such as authentication, analytics, rate limiting, are handled using the Adobe API Gateway in front of the service and manages all requests going to [!DNL Adobe I/O] Runtime. The application routing is done dynamically by the orchestration layer. Custom application can be specified by clients for specific renditions and include custom parameters. Application execution can be fully parallelized as they are separate serverless functions in [!DNL Adobe I/O] Runtime.
 
 * **Applications to process assets** that specialize on certain types of file formats or target renditions. Conceptually, an application is like the Unix pipe concept: an input file gets transformed into one or more output files.
 
