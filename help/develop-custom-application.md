@@ -1,5 +1,5 @@
 ---
-title: Develop for [!DNL Asset Compute Service].
+title: Develop for [!DNL Asset Compute Service]
 description: Create custom applications using [!DNL Asset Compute Service].
 ---
 

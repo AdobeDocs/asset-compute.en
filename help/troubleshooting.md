@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot [!DNL Asset Compute Service].
+title: Troubleshoot [!DNL Asset Compute Service]
 description: Troubleshoot and debug custom applications using [!DNL Asset Compute Service].
 ---
 

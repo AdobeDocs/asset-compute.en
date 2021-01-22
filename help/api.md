@@ -1,5 +1,5 @@
 ---
-title: [!DNL Asset Compute Service] HTTP API.
+title: [!DNL Asset Compute Service] HTTP API
 description: [!DNL Asset Compute Service] HTTP API to create custom applications.
 ---
 

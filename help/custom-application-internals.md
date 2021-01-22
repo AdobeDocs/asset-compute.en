@@ -1,5 +1,5 @@
 ---
-title: Understand the working of a custom application.
+title: Understand the working of a custom application
 description: Internal working of [!DNL Asset Compute Service] custom application to help understand how it works.
 ---
 

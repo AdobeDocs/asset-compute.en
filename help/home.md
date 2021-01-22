@@ -1,5 +1,5 @@
 ---
-title: [!DNL Adobe Asset Compute Service] User Guide.
+title: [!DNL Adobe Asset Compute Service] User Guide
 description: This documentation covers [!DNL Asset Compute Service] tasks such as introduction, how to develops, manage, deploy, and troubleshoot your custom code.
 ---
 

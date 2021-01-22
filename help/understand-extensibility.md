@@ -1,5 +1,5 @@
 ---
-title: Understand about extending [!DNL Asset Compute Service].
+title: Understand about extending [!DNL Asset Compute Service]
 description: When and how to extend the [!DNL Asset Compute Service] functionality to do custom asset processing.
 ---
 
