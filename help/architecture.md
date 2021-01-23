@@ -1,5 +1,5 @@
 ---
-title: Architecture of [!DNL Asset Compute Service].
+title: Architecture of [!DNL Asset Compute Service]
 description: How [!DNL Asset Compute Service] API, applications, and SDK work together to provide a cloud-native asset processing service.
 ---
 

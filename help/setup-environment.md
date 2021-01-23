@@ -1,5 +1,5 @@
 ---
-title: Set the development environment required for [!DNL Asset Compute Service].
+title: Set the development environment required for [!DNL Asset Compute Service]
 description: Developer environment setup for [!DNL Asset Compute Service] to start creating and testing custom code.
 ---
 

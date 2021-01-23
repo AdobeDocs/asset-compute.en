@@ -1,5 +1,5 @@
 ---
-title: Deploy [!DNL Asset Compute Service] custom application.
+title: Deploy [!DNL Asset Compute Service] custom application
 description: Deploy [!DNL Asset Compute Service] custom application.
 ---
 

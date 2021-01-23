@@ -1,5 +1,5 @@
 ---
-title: Test and debug [!DNL Asset Compute Service] custom application.
+title: Test and debug [!DNL Asset Compute Service] custom application
 description: Test and debug [!DNL Asset Compute Service] custom application.
 ---
 
