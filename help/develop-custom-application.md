@@ -115,8 +115,7 @@ Add the following credentials for the developer tool to the ENV file in the root
 
 >[!TIP]
 >
->The `config.json` file contains credentials. From within your project, add the JSON file to your `.gitignore` file.
- to prevent its sharing. The same applies to the .env and .aio files.
+>The `config.json` file contains credentials. From within your project, add the JSON file to your `.gitignore` file to prevent its sharing. The same applies to the .env and .aio files.
 
 ## Execute the application {#run-custom-application}
 
