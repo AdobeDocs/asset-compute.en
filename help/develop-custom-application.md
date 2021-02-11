@@ -89,11 +89,14 @@ Add the following credentials for the developer tool to the ENV file in the root
     ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
     ```
 
-1. If the `console.json` is not in the root directly of your Firefly App, add the absolute path to the Adobe Developer Console integration JSON file. This is the same [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace. Alternately, you can also use the command `aio app use <path_to_console_json>` instead of adding the path to your ENV file.
+1. Download the file from the Adobe Developer Console. Go to the root of the project and click on "Download All" in the upper-right corner. The file is downloaded with `<namespace>-<workspace>.json` as the filename. Do one of the following:
 
-    ```conf
-    ASSET_COMPUTE_INTEGRATION_FILE_PATH=
-    ```
+   * Rename the file as `config.json` and move it in the root of your project.
+   * Optionally, you can add the absolute path to the Adobe Developer Console integration JSON file. This is the same [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace.
+
+      ```conf
+      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+      ```
 
 1. Add either S3 or Azure storage credentials. You only need access to one cloud storage solution.
 
@@ -109,6 +112,11 @@ Add the following credentials for the developer tool to the ENV file in the root
     AZURE_STORAGE_KEY=
     AZURE_STORAGE_CONTAINER_NAME=
     ```
+
+>[!TIP]
+>
+>The `config.json` file contains credentials. From within your project, add the JSON file to your `.gitignore` file.
+ to prevent its sharing. The same applies to the .env and .aio files.
 
 ## Execute the application {#run-custom-application}
 
