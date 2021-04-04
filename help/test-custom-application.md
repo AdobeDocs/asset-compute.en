@@ -1,8 +1,8 @@
 ---
 title: Test and debug [!DNL Asset Compute Service] custom application
 description: Test and debug [!DNL Asset Compute Service] custom application.
+exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 ---
-
 # Test and debug a custom application {#test-debug-custom-worker}
 
 ## Execute unit tests for a custom application {#test-custom-worker}

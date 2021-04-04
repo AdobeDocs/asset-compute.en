@@ -1,8 +1,8 @@
 ---
 title: Develop for [!DNL Asset Compute Service]
 description: Create custom applications using [!DNL Asset Compute Service].
+exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 ---
-
 # Develop a custom application {#develop}
 
 Before you begin to develop a custom application:

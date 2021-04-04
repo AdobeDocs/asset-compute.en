@@ -1,8 +1,8 @@
 ---
 title: Understand about extending [!DNL Asset Compute Service]
 description: When and how to extend the [!DNL Asset Compute Service] functionality to do custom asset processing.
+exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
 ---
-
 # Introduction to extensibility {#introduction-to-extensibilty}
 
 Many rendition requirements such as converting to formats and resizing images are addressed by [Processing Profiles in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). More complex business requirements may need a custom-created solution that suits an organization's needs. [!DNL Asset Compute Service] can be extended by creating custom applications that are called from Processing Profiles in [!DNL Experience Manager]. These custom applications cater to the [supported use cases](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).

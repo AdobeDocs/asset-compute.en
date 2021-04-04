@@ -1,8 +1,8 @@
 ---
 title: Release notes of [!DNL Asset Compute Service]
 description: New features, enhancements, and known issues in [!DNL Asset Compute Service].
+exl-id: b348fa8f-0cd6-4ca1-bfe3-f31e8d6583f0
 ---
-
 # Release notes of [!DNL Asset Compute Service] {#release-notes}
 
 The latest release of [!DNL Asset Compute Service] is released on Jul 30, 2020.

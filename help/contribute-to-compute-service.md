@@ -1,8 +1,8 @@
 ---
 title: Contribute to the open-source components of [!DNL Asset Compute Service]
 description: Contribute to the open-source components of [!DNL Asset Compute Service].
+exl-id: 99a4b4d9-4709-4f8e-9f8c-96ba1783c4c3
 ---
-
 # Contribute {#contribute}
 
 [!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe). Adobe welcomes contributions from extension developers. All the components relevant to developing, building, and testing custom applications are open source. A few suggested ways in which you can contribute are:

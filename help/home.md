@@ -1,8 +1,8 @@
 ---
 title: [!DNL Adobe Asset Compute Service] User Guide
 description: This documentation covers [!DNL Asset Compute Service] tasks such as introduction, how to develops, manage, deploy, and troubleshoot your custom code.
+exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
 ---
-
 # About [!DNL Asset Compute Service]
 
 [!DNL Asset Compute Service] is a scalable and extensible service of Adobe Experience Cloud to process digital assets. It can transform image, video, document, and other file formats into different renditions including thumbnails, extracted text and metadata, archives and more. Developers can plugin custom applications (also called custom workers) to address custom use cases, built using [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) and running in serverless [[!DNL Adobe I/O] Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).

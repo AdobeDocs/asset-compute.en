@@ -1,8 +1,8 @@
 ---
 title: Understand the working of a custom application
 description: Internal working of [!DNL Asset Compute Service] custom application to help understand how it works.
+exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
 ---
-
 # Internals of a custom application {#how-custom-application-works}
 
 Use the following illustration to understand the end-to-end workflow when a digital asset is processed using a custom application by a client.

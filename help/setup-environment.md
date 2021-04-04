@@ -1,8 +1,8 @@
 ---
 title: Set the development environment required for [!DNL Asset Compute Service]
 description: Developer environment setup for [!DNL Asset Compute Service] to start creating and testing custom code.
+exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
 ---
-
 # Setup a developer environment {#create-dev-environment}
 
 To create a setup that allows you to develop for [!DNL Asset Compute Service], follow these requirements and instructions.

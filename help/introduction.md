@@ -1,8 +1,8 @@
 ---
 title: Introduction to the [!DNL Asset Compute Service]
 description: [!DNL Asset Compute Service] is a cloud-native asset processing service that reduces complexity and improves scalability.
+exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
 ---
-
 # Overview of [!DNL Asset Compute Service] {#overview}
 
 [!DNL Asset Compute Service] is a scalable and extensible service of [!DNL Adobe Experience Cloud] to process digital assets. It can transform image, video, document, and other file formats into different renditions including thumbnails, extracted text and metadata, and archives.

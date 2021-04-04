@@ -1,8 +1,8 @@
 ---
 title: Deploy [!DNL Asset Compute Service] custom application
 description: Deploy [!DNL Asset Compute Service] custom application.
+exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
 ---
-
 # Deploy a custom application {#deploy-custom-application}
 
 To deploy your application, use [aio app deploy](https://github.com/adobe/aio-cli#aio-appdeploy) command. In the terminal, the command displays a URL to access the custom application. The URL is of the format `https://[namespace].adobeio-static.net/api/v1/web/[appname]-[appversion]/[workername]`.
