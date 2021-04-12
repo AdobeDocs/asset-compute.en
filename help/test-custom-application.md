@@ -14,7 +14,7 @@ $ aio app test
 ```
 
 <!-- TBD
-To run tests for a custom application, run `adobe-asset-compute test-worker` command in the root of the custom application application application.
+To run tests for a custom application, run `aio asset-compute test-worker` command at the root of the custom application application.
 
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
@@ -166,8 +166,8 @@ Many of these steps are usually automated by `aio` out of the box, see section D
 1. Add to your user settings JSON file. It keeps using the old VS Code debugger, the new one has [some issues](https://github.com/apache/openwhisk-wskdebug/issues/74) with wskdebug: `"debug.javascript.usePreview": false`.
 1. Close any instances of apps open via `aio app run`.
 1. Deploy the latest code using `aio app deploy`.
-1. Execute only the Asset compute Devtool using `npx adobe-asset-compute devtool`. Keep it open.
-1. In VS Code editor, add the below debug configuration to your `launch.json`:
+1. Execute only the Asset Compute Devtool using `aio asset-compute devtool`. Keep it open.
+1. In VS Code Editor, add the following debug configuration to your `launch.json`:
 
     ```json
     {
@@ -188,7 +188,7 @@ Many of these steps are usually automated by `aio` out of the box, see section D
     }
     ```
   
-   Fetch the ACTION NAME from the output of `aio app deploy`. It looks like `Your deployed actions -> TypicalCoffeeCat-0.0.1/__secured_worker`.
+   Fetch the `ACTION NAME` from the output of `aio app deploy`.
 
 1. Select `wskdebug worker` from the run/debug configuration and press the play icon. Wait for it to start till it displays **[!UICONTROL Ready for activations]** in the **[!UICONTROL Debug Console]** window.
 
