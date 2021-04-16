@@ -1,6 +1,6 @@
 ---
 cloud: Experience Cloud
-product: asset compute service
+product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
 type: Documentation
 role: Developer
