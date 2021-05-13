@@ -131,7 +131,9 @@ tests/
 
 Error tests cases should not contain an expected `rendition.*` file and should define the expected `errorReason` inside the `params.json` file.
 
-Note: If the test case does not contain an expected `rendition.*` file and does not define the expected `errorReason` inside the `params.json` file, it will be assumed it is an expected error case of any `errorReason`.
+>[!NOTE]
+>
+>If a test case does not contain an expected `rendition.*` file and does not define the expected `errorReason` inside the `params.json` file, it is assumed to be an error case with any `errorReason`.
 
 Error Test Case Structure:
 
