@@ -18,9 +18,9 @@ The custom applications are headless [Project Firefly](https://github.com/AdobeD
 Ensure you meet the following prerequisites:
 
 * Project Firefly tools are installed on your machine.
-* An [!DNL Experience Cloud] organization. More information [here](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials).
+* An [!DNL Experience Cloud] organization. More information [here](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials).
 * The Experience Organization must have [!DNL Experience Manager] as a [!DNL Cloud Service] enabled.
-* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Project Firefly] developer preview program. See [how to apply for access](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
+* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Project Firefly] developer preview program. See [how to apply for access](https://www.adobe.io/project-firefly/docs/overview/getting_access/).
 * Ensure a developer role or administrator permissions in the organization for the developer.
 * Ensure that [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) is installed locally.
 
