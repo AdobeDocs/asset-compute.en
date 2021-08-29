@@ -34,7 +34,7 @@ The architecture consists of the following parts:
 <!-- TBD:
 
 * About the YAML file?
-* See [https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+* See [https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
 * minimize description to custom applications
 * remove all internal stuff (e.g. Photoshop application, API Gateway) from text and diagram

@@ -15,11 +15,11 @@ Before you begin to develop a custom application:
 
 Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) installed locally.
 
-1. To create a custom application, [create a Firefly app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). To do so, execute `aio app init <app-name>` in your terminal.
+1. To create a custom application, [create a Firefly app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). To do so, execute `aio app init <app-name>` in your terminal.
 
-    If you have not logged in already, this command prompts a browser asking you to sign into the [Adobe Developer Console](https://console.adobe.io/) with your Adobe ID. See [here](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) for more information on signing in from the cli.
+    If you have not logged in already, this command prompts a browser asking you to sign into the [Adobe Developer Console](https://console.adobe.io/) with your Adobe ID. See [here](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) for more information on signing in from the cli.
 
-    Adobe recommends that you login. If you are having issues then follow the instructions [to create an app without logging in](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
+    Adobe recommends that you login. If you are having issues then follow the instructions [to create an app without logging in](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. After logging in, follow the prompts in the CLI and select the `Organization`, `Project`, and `Workspace` to use for the application. Choose the project and workspace you created when you [set up your environment](setup-environment.md).
 
@@ -54,7 +54,7 @@ Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) i
 
 1. Follow the rest of the prompts and open the new application in Visual Studio Code (or your favorite code editor). It contains the scaffolding and sample code for a custom application.
 
-    Read here about the [main components of a Firefly app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+    Read here about the [main components of a Firefly app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
     The template application leverages our [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) for the uploading, downloading, and orchestration of application renditions so developers only need to implement the custom application logic. Inside the `actions/<worker-name>` folder, the `index.js` file is where to add the custom application code.
 
@@ -92,7 +92,7 @@ Add the following credentials for the developer tool to the ENV file in the root
 1. Download the file from the Adobe Developer Console. Go to the root of the project and click on "Download All" in the upper-right corner. The file is downloaded with `<namespace>-<workspace>.json` as the filename. Do one of the following:
 
    * Rename the file as `console.json` and move it in the root of your project.
-   * Optionally, you can add the absolute path to the Adobe Developer Console integration JSON file. This is the same [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace.
+   * Optionally, you can add the absolute path to the Adobe Developer Console integration JSON file. This is the same [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
