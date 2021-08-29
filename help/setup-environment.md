@@ -21,6 +21,10 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
 
 1. Make sure to meet the [prerequisites](/help/understand-extensibility.md#prerequisites-and-provisioning).
 
+>[!NOTE]
+>
+>For now, use [!DNL Adobe I/O] CLI v7.1.0 of and do not use [!DNL Adobe I/O] CLI v8.
+
 ## Setup a Firefly project {#create-firefly-project}
 
 1. Ensure system administrator or developer role in the [!DNL Experience Cloud] organization. This is set up by a system admin in the [Admin Console](https://adminconsole.adobe.com/overview).
