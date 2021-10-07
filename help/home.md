@@ -11,8 +11,6 @@ This documentation covers [!DNL Asset Compute Service] topics such as how to dev
 
 [!DNL Asset Compute Service] supports conversion of many file formats and integrates with many Adobe services. See the list of [supported file formats and services integration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
-For release-related information and what is the latest, see the [release notes](/help/release-notes.md).
-
 See an overview about [asset microservices capabilities available in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) and how to use the microservices in [!DNL Experience Manager].
 
 <!--
