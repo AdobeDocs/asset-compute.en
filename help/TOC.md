@@ -13,7 +13,6 @@ breadcrumb-title: Asset Compute Service Guide
 
 + [Asset Compute Service user guide](home.md)
 + [Overview](introduction.md)
-+ [Release notes](release-notes.md)
 + [Supported file formats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Architecture](architecture.md)
 + [API references](api.md)
