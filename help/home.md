@@ -13,6 +13,8 @@ This documentation covers [!DNL Asset Compute Service] topics such as how to dev
 
 See an overview about [asset microservices capabilities available in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) and how to use the microservices in [!DNL Experience Manager].
 
+[!DNL Asset Compute Service] extensibility is developed under an open development model on [github.com/adobe](https://github.com/adobe) that welcomes contributions from extension developers. All the components that are relevant to develop, create, testing, and deploy custom applications are open source. See [how and where to contribute to Compute Service](contribute-to-compute-service.md).
+
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
  List of dependencies and requirements SDK, CLI, Devtools, etc.? Or may be a link to the prerequisites.
