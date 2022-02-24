@@ -1,6 +1,6 @@
 ---
 title: Introduction to the [!DNL Asset Compute Service]
-description: [!DNL Asset Compute Service] is a cloud-native asset processing service that reduces complexity and improves scalability.
+description: "[!DNL Asset Compute Service] is a cloud-native asset processing service that reduces complexity and improves scalability."
 exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
 ---
 # Overview of [!DNL Asset Compute Service] {#overview}
