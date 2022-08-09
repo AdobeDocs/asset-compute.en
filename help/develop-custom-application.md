@@ -15,7 +15,7 @@ Before you begin to develop a custom application:
 
 Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) installed locally.
 
-1. To create a custom application, [create a Firefly app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). To do so, execute `aio app init <app-name>` in your terminal.
+1. To create a custom application, [create an App Builder project](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). To do so, execute `aio app init <app-name>` in your terminal.
 
     If you have not logged in already, this command prompts a browser asking you to sign into the [Adobe Developer Console](https://console.adobe.io/) with your Adobe ID. See [here](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) for more information on signing in from the cli.
 
@@ -56,7 +56,7 @@ Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) i
 
 1. Follow the rest of the prompts and open the new application in Visual Studio Code (or your favorite code editor). It contains the scaffolding and sample code for a custom application.
 
-    Read here about the [main components of a Firefly app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+    Read here about the [main components of a App Builder app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
     The template application leverages our [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) for the uploading, downloading, and orchestration of application renditions so developers only need to implement the custom application logic. Inside the `actions/<worker-name>` folder, the `index.js` file is where to add the custom application code.
 
