@@ -15,21 +15,23 @@ Before you begin to develop a custom application:
 
 Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) installed locally.
 
-1. To create a custom application, [create a Firefly app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). To do so, execute `aio app init <app-name>` in your terminal.
+1. To create a custom application, [create an App Builder project](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). To do so, execute `aio app init <app-name>` in your terminal.
 
     If you have not logged in already, this command prompts a browser asking you to sign into the [Adobe Developer Console](https://console.adobe.io/) with your Adobe ID. See [here](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) for more information on signing in from the cli.
 
     Adobe recommends that you login. If you are having issues then follow the instructions [to create an app without logging in](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
-1. After logging in, follow the prompts in the CLI and select the `Organization`, `Project`, and `Workspace` to use for the application. Choose the project and workspace you created when you [set up your environment](setup-environment.md).
+1. After logging in, follow the prompts in the CLI and select the `Organization`, `Project`, and `Workspace` to use for the application. Choose the project and workspace you created when you [set up your environment](setup-environment.md). When prompted `Which extension point(s) do you wish to implement ?`, make sure to select `DX Asset Compute Worker`:
 
     ```sh
     $ aio app init <app-name>
     Retrieving information from [!DNL Adobe I/O] Console.
     ? Select Org My Adobe Org
     ? Select Project MyFireflyProject
-    ? Select Workspace myworkspace
-    create console.json
+    ? Which extension point(s) do you wish to implement ? (Press <space> to select, <a>
+    to toggle all, <i> to invert selection)
+    ❯◯ DX Experience Cloud SPA
+    ◯ DX Asset Compute Worker
     ```
 
 1. When prompted with `Which Adobe I/O App features do you want to enable for this project?`, select `Actions`. Make sure to deselect `Web Assets` option as web assets use different authentication and authorization checks.
@@ -54,7 +56,7 @@ Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) i
 
 1. Follow the rest of the prompts and open the new application in Visual Studio Code (or your favorite code editor). It contains the scaffolding and sample code for a custom application.
 
-    Read here about the [main components of a Firefly app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+    Read here about the [main components of a App Builder app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
     The template application leverages our [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) for the uploading, downloading, and orchestration of application renditions so developers only need to implement the custom application logic. Inside the `actions/<worker-name>` folder, the `index.js` file is where to add the custom application code.
 
@@ -62,7 +64,7 @@ See [example custom applications](#try-sample) for examples and ideas for custom
 
 ### Add credentials {#add-credentials}
 
-As you log in when creating the application, most of the Firefly credentials get collected in your ENV file. However, using the developer tool requires additional credentials.
+As you log in when creating the application, most of the App Builder credentials get collected in your ENV file. However, using the developer tool requires additional credentials.
 
 <!-- TBD: Check if manual setup of credentials is required.
 Manual set up of credentials is removed from troubleshooting and best practices page. Link was broken.
@@ -81,9 +83,9 @@ Make sure to have access to a [supported cloud storage container](https://github
 
 #### Add credentials to ENV file {#add-credentials-env-file}
 
-Add the following credentials for the developer tool to the ENV file in the root of your Firefly project:
+Add the following credentials for the developer tool to the ENV file in the root of your App Builder project:
 
-1. Add the absolute path to the private key file created while adding services to your Firefly Project:
+1. Add the absolute path to the private key file created while adding services to your App Builder Project:
 
     ```conf
     ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
@@ -214,7 +216,7 @@ The `example-worker-animal-pictures` passes a custom parameter [`animal`](https:
 
 ## Authentication and authorization support {#authentication-authorization-support}
 
-By default, Asset Compute custom applications come with Authorization and Authentication checks for Firefly Applications. This is enabled by setting the `require-adobe-auth` annotation to `true` in the `manifest.yml`.
+By default, Asset Compute custom applications come with Authorization and Authentication checks for App Builder project. This is enabled by setting the `require-adobe-auth` annotation to `true` in the `manifest.yml`.
 
 ### Access other Adobe APIs {#access-adobe-apis}
 
@@ -286,6 +288,6 @@ Asset compute applications by nature tend to be network and disk Input or output
 
 The memory available to an action container is specified by `memorySize` in MB. Currently this also defines how much CPU access the container gets, and most importantly it is a key element of the cost of using Runtime (larger containers cost more). Use a larger value here when your processing requires more memory or CPU but be careful to not waste resources as the larger the containers are, the lower the overall throughput is.
 
-Furthermore, it is possible to control action concurrency within a container using the `concurrency` setting. This is the number of concurrent activations a single container (of the same action) gets. In this model, the action container is like a Node.js server receiving multiple concurrent requests, up to that limit. If not set, the default in Runtime is 200, which is great for smaller Firefly actions, but usually too large for Asset Compute applications given their more intensive local processing and disk activity. Some applications, depending on their implementation, might also not work well with concurrent activity. The Asset Compute SDK ensures activations are separated by writing files to different unique folders.
+Furthermore, it is possible to control action concurrency within a container using the `concurrency` setting. This is the number of concurrent activations a single container (of the same action) gets. In this model, the action container is like a Node.js server receiving multiple concurrent requests, up to that limit. If not set, the default in Runtime is 200, which is great for smaller App Builder actions, but usually too large for Asset Compute applications given their more intensive local processing and disk activity. Some applications, depending on their implementation, might also not work well with concurrent activity. The Asset Compute SDK ensures activations are separated by writing files to different unique folders.
 
 Test applications to find the optimal numbers for `concurrency` and `memorySize`. Larger containers = higher memory limit could allow for more concurrency but could also be wasteful for lower traffic.

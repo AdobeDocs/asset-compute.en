@@ -62,7 +62,7 @@ A sample custom application processing request is below.
 }
 ```
 
-The [!DNL Asset Compute Service] sends the custom application rendition requests to the custom application. It uses an HTTP POST to the provided application URL, which is the secured web action URL from Project Firefly. All requests use the HTTPS protocol to maximize data security.
+The [!DNL Asset Compute Service] sends the custom application rendition requests to the custom application. It uses an HTTP POST to the provided application URL, which is the secured web action URL from Project App Builder. All requests use the HTTPS protocol to maximize data security.
 
 The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) used by a custom application handles the HTTP POST request. It also handles downloading of the source, uploading renditions, sending [!DNL Adobe I/O] events and error handling.
 
