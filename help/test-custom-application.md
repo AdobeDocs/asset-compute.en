@@ -60,7 +60,7 @@ Have a look at [example custom applications](https://github.com/adobe/asset-comp
 
 ### Test output {#test-output}
 
-The detailed test output including the logs of the custom application are made available in the `build` folder at the root of the Firefly app as demonstrated in the `aio app test` output.
+The detailed test output including the logs of the custom application are made available in the `build` folder at the root of the Adobe Developer App Builder app as demonstrated in the `aio app test` output.
 
 ### Mock external services {#mock-external-services}
 
@@ -158,7 +158,7 @@ See complete list and description of [Asset Compute error reasons](https://githu
 
 The following steps show how you can debug your custom application using Visual Studio Code. It allows for seeing live logs, hit breakpoints and step through code as well as live reloading of local code changes upon every activation.
 
-Many of these steps are usually automated by `aio` out of the box, see section Debugging the Application in the [Firefly documentation](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). For now, the below steps include a workaround.
+Many of these steps are usually automated by `aio` out of the box, see section Debugging the Application in the [Adobe Developer App Builder documentation](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). For now, the below steps include a workaround.
 
 1. Install the latest [wskdebug](https://github.com/apache/openwhisk-wskdebug) from GitHub and the optional [ngrok](https://www.npmjs.com/package/ngrok).
 

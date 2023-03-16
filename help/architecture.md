@@ -7,9 +7,9 @@ exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
 
 The [!DNL Asset Compute Service] is built on top of serverless [!DNL Adobe I/O] Runtime platform. It provides Adobe Sensei content services support for assets. The invoking client (only [!DNL Experience Manager] as a [!DNL Cloud Service] is supported) is provided with the Adobe Sensei-generated information that it sought for the asset. The information returned is in JSON format.
 
-[!DNL Asset Compute Service] is extendable by creating custom applications based on [!DNL Project Firefly]. These custom applications are [!DNL Project Firefly] headless apps and do tasks such as add custom conversion tools or call external APIs to perform image operations.
+[!DNL Asset Compute Service] is extendable by creating custom applications based on [!DNL Project Adobe Developer App Builder]. These custom applications are [!DNL Project Adobe Developer App Builder] headless apps and do tasks such as add custom conversion tools or call external APIs to perform image operations.
 
-[!DNL Project Firefly] is a framework to build and deploy custom web applications on [!DNL Adobe I/O] runtime. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe’s UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Project Adobe Developer App Builder] is a framework to build and deploy custom web applications on [!DNL Adobe I/O] runtime. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe’s UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Adobe Developer App Builder](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 
 The foundation on which the architecture is based includes:
 

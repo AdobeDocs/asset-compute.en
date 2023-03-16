@@ -27,7 +27,7 @@ Make sure to have the [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) i
     $ aio app init <app-name>
     Retrieving information from [!DNL Adobe I/O] Console.
     ? Select Org My Adobe Org
-    ? Select Project MyFireflyProject
+    ? Select Project MyAdobe Developer App BuilderProject
     ? Which extension point(s) do you wish to implement ? (Press <space> to select, <a>
     to toggle all, <i> to invert selection)
     ❯◯ DX Experience Cloud SPA

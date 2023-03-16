@@ -22,7 +22,7 @@ See this list of [open-sourced libraries](https://github.com/adobe/asset-compute
 * [[!DNL Adobe I/O] Runtime FAQ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
 
 <!-- **TBD** for post-release:
-* Link to Firefly open-source components.
-* Issues in `aio` can be reported in Firefly repos.
+* Link to Adobe Developer App Builder open-source components.
+* Issues in `aio` can be reported in Adobe Developer App Builder repos.
 * Issues in asset-compute-sdk or devtool goes into the relevant repos from Nui.
 -->
