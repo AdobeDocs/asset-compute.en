@@ -11,16 +11,16 @@ Many rendition requirements such as converting to formats and resizing images ar
 >
 >[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a [!DNL Cloud Service].
 
-The custom applications are headless [Project Firefly](https://github.com/AdobeDocs/project-firefly) apps. Extending [!DNL Asset Compute Service] with custom applications is made simple through the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) and Project Firefly developer tooling. This allows developers to focus on business logic. Creating custom applications is as simple as creating a plain serverless [!DNL Adobe I/O] Runtime action. It is a single Node.js JavaScript function. The [basic custom application example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrates it.
+The custom applications are headless [Adobe Developer App Builder](https://github.com/AdobeDocs/app-builder) apps. Extending [!DNL Asset Compute Service] with custom applications is made simple through the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) and Adobe Developer App Builder developer tooling. This allows developers to focus on business logic. Creating custom applications is as simple as creating a plain serverless [!DNL Adobe I/O] Runtime action. It is a single Node.js JavaScript function. The [basic custom application example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrates it.
 
 ## Prerequisites and provisioning requirements {#prerequisites-and-provisioning}
 
 Ensure you meet the following prerequisites:
 
-* Project Firefly tools are installed on your machine.
-* An [!DNL Experience Cloud] organization. More information [here](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials).
+* Adobe Developer App Builder tools are installed on your machine.
+* An [!DNL Experience Cloud] organization. More information [here](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials).
 * The Experience Organization must have [!DNL Experience Manager] as a [!DNL Cloud Service] enabled.
-* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Project Firefly] developer preview program. See [how to apply for access](https://www.adobe.io/project-firefly/docs/overview/getting_access/).
+* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Adobe Developer App Builder] developer preview program. See [how to apply for access](https://developer.adobe.com/app-builder/docs/overview/getting_access).
 * Ensure a developer role or administrator permissions in the organization for the developer.
 * Ensure that [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) is installed locally.
 
