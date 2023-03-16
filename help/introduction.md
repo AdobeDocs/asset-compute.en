@@ -7,9 +7,9 @@ exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
 
 [!DNL Asset Compute Service] is a scalable and extensible service of [!DNL Adobe Experience Cloud] to process digital assets. It can transform image, video, document, and other file formats into different renditions including thumbnails, extracted text and metadata, and archives.
 
-Developers can plugin custom asset applications (also called custom workers) to address custom use cases. The service works on the [!DNL Adobe I/O] runtime. It is extendable through [!DNL Project Firefly] headless apps written in Node.js. These can do custom operations such as calling external APIs to perform image operations or leverage [!DNL Adobe Sensei] support.
+Developers can plugin custom asset applications (also called custom workers) to address custom use cases. The service works on the [!DNL Adobe I/O] runtime. It is extendable through [!DNL Adobe Developer App Builder] headless apps written in Node.js. These can do custom operations such as calling external APIs to perform image operations or leverage [!DNL Adobe Sensei] support.
 
-[!DNL Project Firefly] is a framework to build and deploy custom web applications on [!DNL Adobe I/O] runtime to extend Adobe Experience Cloud solutions. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe’s UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Adobe Developer App Builder] is a framework to build and deploy custom web applications on [!DNL Adobe I/O] runtime to extend Adobe Experience Cloud solutions. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe’s UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Adobe Developer App Builder](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ You can use [!DNL Asset Compute] web service to generate thumbnails for differen
 >[!MORELIKETHIS]
 >
 >* [Overview of asset processing with asset microservices in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
->* [Documentation of Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+>* [Documentation of Adobe Developer App Builder](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [File formats supported for processing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 <!-- **TBD:**
