@@ -7,9 +7,9 @@ exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
 
 To create a setup that allows you to develop for [!DNL Asset Compute Service], follow these requirements and instructions.
 
-1. [Acquire access and credentials](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) for [!DNL Adobe Developer App Builder].
+1. [Acquire access and credentials](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials) for [!DNL Adobe Developer App Builder].
 
-1. [Set up the local environment](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) and the required tools.
+1. [Set up the local environment](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up) and the required tools.
 
 1. Some more tools that help you get started developing smoothly are:
 

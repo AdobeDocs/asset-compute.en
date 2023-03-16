@@ -94,7 +94,7 @@ Add the following credentials for the developer tool to the ENV file in the root
 1. Download the file from the Adobe Developer Console. Go to the root of the project and click on "Download All" in the upper-right corner. The file is downloaded with `<namespace>-<workspace>.json` as the filename. Do one of the following:
 
    * Rename the file as `console.json` and move it in the root of your project.
-   * Optionally, you can add the absolute path to the Adobe Developer Console integration JSON file. This is the same [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace.
+   * Optionally, you can add the absolute path to the Adobe Developer Console integration JSON file. This is the same [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
