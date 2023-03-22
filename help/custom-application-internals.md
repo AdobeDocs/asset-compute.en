@@ -7,7 +7,7 @@ exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
 
 Use the following illustration to understand the end-to-end workflow when a digital asset is processed using a custom application by a client.
 
-![Custom application workflow](assets/customworker.png)
+![Custom application workflow](assets/customworker.svg)
 
 *Figure: Steps involved to process an Asset using [!DNL Asset Compute Service].*
 
