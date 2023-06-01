@@ -20,7 +20,7 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
    * Install the latest[[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`)
    <!-- - install using `npm install -g @adobe/aio-cli@7.1.0` -->
 
-1. Make sure to meet the [prerequisites](/help/understand-extensibility.md#prerequisites-and-provisioning)
+1. Make sure to meet the [prerequisites](/help/using/understand-extensibility.md#prerequisites-and-provisioning)
 
 <!--
 >[!NOTE]

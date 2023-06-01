@@ -7,8 +7,8 @@ exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 
 Before you begin to develop a custom application:
 
-* Ensure that all the [prerequisites](/help/understand-extensibility.md#prerequisites-and-provisioning) are met.
-* Install the [required software tools](/help/setup-environment.md#create-dev-environment).
+* Ensure that all the [prerequisites](/help/using/understand-extensibility.md#prerequisites-and-provisioning) are met.
+* Install the [required software tools](/help/using/setup-environment.md#create-dev-environment).
 * See [set up your environment](setup-environment.md) to make sure you are ready to create a custom application.
 
 ## Create a custom application {#create-custom-application}
