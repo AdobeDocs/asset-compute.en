@@ -8,6 +8,7 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: Tutorials
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 mini-toc-levels: 2
+feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.en
 index: y
 ---
