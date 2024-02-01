@@ -11,6 +11,7 @@ mini-toc-levels: 2
 feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.en
 index: y
+recommendations: noDisplay
 ---
 
 # Metadata for internal use
