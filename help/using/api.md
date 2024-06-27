@@ -5,7 +5,7 @@ exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
 ---
 # [!DNL Asset Compute Service] HTTP API {#asset-compute-http-api}
 
-The use of the API is limited to development purposes. The API is provided as a context when developing custom applications. [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] uses the API to pass the processing information to a custom application. For more information, see [Use asset microservices and Processing Profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+The use of the API is limited to development purposes. The API is provided as a context when developing custom applications. [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] uses the API to pass the processing information to a custom application. For more information, see [Use asset microservices and Processing Profiles](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
@@ -13,9 +13,9 @@ The use of the API is limited to development purposes. The API is provided as a 
 
 Any client of the [!DNL Asset Compute Service] HTTP API must follow this high-level flow:
 
-1. A client is provisioned as [!DNL Adobe Developer Console] project in an IMS organization. Each separate client (system or environment) requires its own separate project in order to separate the event data flow.
+1. A client is provisioned as an [!DNL Adobe Developer Console] project in an IMS organization. Each separate client (system or environment) requires its own separate project to separate the event data flow.
 
-1. A client generates an access token for the technical account using the [JWT (Service Account) Authentication](https://www.adobe.io/authentication/auth-methods.html).
+1. A client generates an access token for the technical account using the [JWT (Service Account) Authentication](https://developer.adobe.com/developer-console/docs/guides/).
 
 1. A client calls [`/register`](#register) only once to retrieve the journal URL.
 
@@ -23,13 +23,13 @@ Any client of the [!DNL Asset Compute Service] HTTP API must follow this high-le
 
 1. A client regularly polls the journal to [receive events](#asynchronous-events). It receives events for each requested rendition when the rendition is successfully processed (`rendition_created` event type) or if there is an error (`rendition_failed` event type).
 
-The [@adobe/asset-compute-client](https://github.com/adobe/asset-compute-client) module makes it easy to use the API in Node.js code.
+The [adobe-asset-compute-client](https://github.com/adobe/asset-compute-client) module makes it easy to use the API in Node.js code.
 
 ## Authentication and authorization {#authentication-and-authorization}
 
 All APIs require access token authentication. The requests must set the following headers:
 
-1. `Authorization` header with bearer token, which is the technical account token, received via [JWT exchange](https://www.adobe.io/authentication/auth-methods.html) from Adobe Developer Console project. The [scopes](#scopes) are documented below.
+1. `Authorization` header with bearer token, which is the technical account token, received via [JWT exchange](https://developer.adobe.com/developer-console/docs/guides/) from Adobe Developer Console project. The [scopes](#scopes) are documented below.
 
 <!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in Adobe I/O's GitHub repo to get a new URL.
 -->
@@ -52,7 +52,7 @@ Ensure the following scopes for the access token:
 * `additional_info.roles`
 * `additional_info.projectedProductContext`
 
-These require the [!DNL Adobe Developer Console] project to be subscribed to `Asset Compute`, `I/O Events`, and `I/O Management API` services. The breakdown of individual scopes is:
+These scopes require the [!DNL Adobe Developer Console] project to be subscribed to `Asset Compute`, `I/O Events`, and `I/O Management API` services. The breakdown of individual scopes is:
 
 * Basic
   * scopes: `openid,AdobeID`
@@ -61,30 +61,30 @@ These require the [!DNL Adobe Developer Console] project to be subscribed to `As
   * metascope: `asset_compute_meta`
   * scopes: `asset_compute,read_organizations`
 
-* [!DNL Adobe I/O] Events
+* Adobe [!DNL `I/O Events`]
   * metascope: `event_receiver_api`
   * scopes: `event_receiver,event_receiver_api`
 
-* [!DNL Adobe I/O] Management API
+* Adobe [!DNL `I/O Management API`]
   * metascope: `ent_adobeio_sdk`
   * scopes: `adobeio_api,additional_info.roles,additional_info.projectedProductContext`
 
 ## Registration {#register}
 
-Each client of the [!DNL Asset Compute service] - a unique [!DNL Adobe Developer Console] project subscribed to the service - must [register](#register-request) before making processing requests. The registration step returns the unique event journal which is required to retrieve the asynchronous events from rendition processing.
+Each client of the [!DNL Asset Compute service] - a unique [!DNL Adobe Developer Console] project subscribed to the service - must [register](#register-request) before making processing requests. The registration step returns the unique event journal that is required to retrieve the asynchronous events from rendition processing.
 
 At the end of its lifecycle, a client can [unregister](#unregister-request).
 
 ### Register request {#register-request}
 
-This API call sets up an [!DNL Asset Compute] client and provides the event journal URL. This is an idempotent operation and only needs to be called once for each client. It can be called again to retrieve the journal URL.
+This API call sets up an [!DNL Asset Compute] client and provides the event journal URL. This process is an idempotent operation and only needs to be called once for each client. It can be called again to retrieve the journal URL.
 
 | Parameter                | Value                                                |
 |--------------------------|------------------------------------------------------|
 | Method                   | `POST`                                               |
 | Path                     | `/register`                                          |
 | Header `Authorization`   | All [authorization related headers](#authentication-and-authorization). |
-| Header `x-request-id`    | Optional, can be set by clients for a unique end-to-end identifier of the processing requests across systems. |
+| Header `x-request-id`    | Optional, set by clients for a unique end-to-end identifier of the processing requests across systems. |
 | Request body | Must be empty. |
 
 ### Register response {#register-response}
@@ -92,12 +92,12 @@ This API call sets up an [!DNL Asset Compute] client and provides the event jour
 | Parameter             | Value                                                |
 |-----------------------|------------------------------------------------------|
 | MIME type             | `application/json`                                   |
-| Header `X-Request-Id` | Either the same as the `X-Request-Id` request header or a uniquely generated one. Use for identifying requests across systems and/or support requests. |
-| Response body         | A JSON object with `journal`, `ok` and/or `requestId` fields. |
+| Header `X-Request-Id` | Either the same as the `X-Request-Id` request header or a uniquely generated one. Use for identifying requests across systems, or support requests, or both. |
+| Response body         | A JSON object with `journal`, `ok`, or `requestId` fields. |
 
 The HTTP status codes are:
 
-* **200 Success**: When the request is successful. It contains the `journal` URL that is be notified about any results of the asynchronous processing triggered via `/process` (as events type `rendition_created` when successful, or `rendition_failed` when failing).
+* **200 Success**: When the request is successful. The `journal` URL receives notifications about the outcomes of the asynchronous processing initiated by way of `/process`. It alerts of `rendition_created` events upon successful completion, or `rendition_failed` events if the process fails.
 
   ```json
   {
@@ -111,7 +111,7 @@ The HTTP status codes are:
 
 * **403 Forbidden**: occurs when the request does not have valid [authorization](#authentication-and-authorization). An example might be a valid access token, but the Adobe Developer Console project (technical account) is not subscribed to all required services.
 
-* **429 Too many requests**: occurs when the system is overloaded by this client or otherwise. Clients should retry with an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff). The body is empty.
+* **429 Too many requests**: occurs when this client or otherwise overloads the system. Clients should retry with an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff). The body is empty.
 * **4xx error**: When there was any other client error and registration failed. Usually a JSON response such as this is returned, although that is not guaranteed for all errors:
 
   ```json
@@ -134,14 +134,14 @@ The HTTP status codes are:
 
 ### Unregister request {#unregister-request}
 
-This API call unregisters an [!DNL Asset Compute] client. After this it is no longer possible to call `/process`. Using the API call for an unregistered client or a yet-to-be registered client returns a `404` error.
+This API call unregisters an [!DNL Asset Compute] client. After this unregistration occurs, it is no longer possible to call `/process`. Using the API call for an unregistered client or a yet-to-be registered client returns a `404` error.
 
 | Parameter                | Value                                                |
 |--------------------------|------------------------------------------------------|
 | Method | `POST`          |
 | Path   | `/unregister`   |
 | Header `Authorization`   | All [authorization related headers](#authentication-and-authorization). |
-| Header `x-request-id`    | Optional, can be set by clients for a unique end-to-end identifier of the processing requests across systems. |
+| Header `x-request-id`    | Optional. Clients can set it for a unique end-to-end identifier of the processing requests across systems. |
 | Request body | Empty. |
 
 ### Unregister response {#unregister-response}
@@ -149,7 +149,7 @@ This API call unregisters an [!DNL Asset Compute] client. After this it is no lo
 | Parameter             | Value                                                |
 |-----------------------|------------------------------------------------------|
 | MIME type             | `application/json`                                   |
-| Header `X-Request-Id` | Either the same as the `X-Request-Id` request header or a uniquely generated one. Use for identifying requests across systems and/or support requests. |
+| Header `X-Request-Id` | Either the same as the `X-Request-Id` request header or a uniquely generated one. Use for identifying requests across systems or support requests. |
 | Response body         | A JSON object with `ok` and `requestId` fields. |
 
 The status codes are:
@@ -167,7 +167,7 @@ The status codes are:
 
 * **403 Forbidden**: occurs when the request does not have valid [authorization](#authentication-and-authorization). An example might be a valid access token, but the Adobe Developer Console project (technical account) is not subscribed to all required services.
 
-* **404 Not found**: occurs when there is no current registration for the given credentials.
+* **404 Not found**: This status appears when the provided credentials are unregistered or invalid.
 
   ```json
   {
@@ -200,9 +200,9 @@ The status codes are:
 
 ## Process request {#process-request}
 
-The `process` operation submits a job that transforms a source asset into multiple renditions, based on the instructions in the request. Notifications about successful completion (event type `rendition_created`) or any errors (event type `rendition_failed`) are sent to an Event journal that must be retrieved using [/register](#register) once before making any number of `/process` requests. Incorrectly formed requests immediately fail with a 400 error code.
+The `process` operation submits a job that transforms a source asset into multiple renditions, based on the instructions in the request. Notifications about successful completion (event type `rendition_created`) or any errors (event type `rendition_failed`) are sent to an Event journal that must be retrieved using [`/register`](#register) once before making any number of `/process` requests. Incorrectly formed requests immediately fail with a 400 error code.
 
-Binaries are referenced using URLs, such as Amazon AWS S3 pre-signed URLs or Azure Blob Storage SAS URLs, for both reading the `source` asset (`GET` URLs) and writing the renditions (`PUT` URLs). The client is responsible for generating these pre-signed URLs.
+Binaries are referenced using URLs, such as Amazon AWS S3 pre-signed URLs or Azure Blob Storage SAS URLs. Used for both reading the `source` asset (`GET` URLs) and writing the renditions (`PUT` URLs). The client is responsible for generating these pre-signed URLs.
 
 | Parameter                | Value                                                |
 |--------------------------|------------------------------------------------------|
@@ -210,8 +210,8 @@ Binaries are referenced using URLs, such as Amazon AWS S3 pre-signed URLs or Azu
 | Path      | `/process`   |
 | MIME type | `application/json` |
 | Header `Authorization`   | All [authorization related headers](#authentication-and-authorization). |
-| Header `x-request-id`    | Optional, can be set by clients for a unique end-to-end identifier of the processing requests across systems. |
-| Request body | Must be in the process request JSON format as described below. It provides instructions on what asset to process and what renditions to generate. |
+| Header `x-request-id`    | Optional. Clients can set a unique end-to-end identifier to track processing requests across systems. |
+| Request body | It must be in the process request JSON format as described below. It provides instructions on what asset to process and what renditions to generate. |
 
 ### Process request JSON {#process-request-json}
 
@@ -228,9 +228,9 @@ The available fields are:
 
 | Name         | Type     | Description | Example |
 |--------------|----------|-------------|---------|
-| `source`     | `string` | URL of the source asset to process. Optional based on requested rendition format (e.g. `fmt=zip`). | `"http://example.com/image.jpg"` |
-| `source`     | `object` | Describing the source asset to process. See description of [Source object fields](#source-object-fields) below. Optional based on requested rendition format (e.g. `fmt=zip`). | `{"url": "http://example.com/image.jpg", "mimeType": "image/jpeg" }` |
-| `renditions` | `array`  | Renditions to generate from the source file. Each rendition object supports [rendition instruction](#rendition-instructions). Required. | `[{ "target": "https://....", "fmt": "png" }]` |
+| `source`     | `string` | URL of the source asset that is processed. Optional, based on requested rendition format (for example, `fmt=zip`). | `"http://example.com/image.jpg"` |
+| `source`     | `object` | Describing the source asset that is processed. See description of [Source object fields](#source-object-fields) below. Optional based on requested rendition format (for example, `fmt=zip`). | `{"url": "http://example.com/image.jpg", "mimeType": "image/jpeg" }` |
+| `renditions` | `array`  | Renditions to generate from the source file. Each rendition object supports a [rendition instruction](#rendition-instructions). Required. | `[{ "target": "https://....", "fmt": "png" }]` |
 
 The `source` can either be a `<string>` that is seen as a URL or it can be an `<object>` with an additional field. The following variants are similar:
 
@@ -249,7 +249,7 @@ The `source` can either be a `<string>` that is seen as a URL or it can be an `<
 | Name      | Type     | Description | Example |
 |-----------|----------|-------------|---------|
 | `url`     | `string` | URL of the source asset to process. Required. | `"http://example.com/image.jpg"` |
-| `name`    | `string` | Source asset file name. File extension in the name might be used if no MIME type can be detected. Takes precedence over file name in URL path or file name in `content-disposition` header of the binary resource. Defaults to "file". | `"image.jpg"` |
+| `name`    | `string` | Source asset file name. A file extension in the name might be used if no MIME type is detected. It has priority over the file name specified in the URL path. And, it has priority over the file name in the `content-disposition` header of the binary resource. Defaults to "file." | `"image.jpg"` |
 | `size`    | `number` | Source asset file size in bytes. Takes precedence over `content-length` header of the binary resource. | `10234` |
 | `mimetype`| `string` | Source asset file MIME type. Takes precedence over the `content-type` header of the binary resource. | `"image/jpeg"` |
 
@@ -289,7 +289,7 @@ The `/process` request immediately returns with a success or a failure based on 
 | Parameter             | Value                                                |
 |-----------------------|------------------------------------------------------|
 | MIME type             | `application/json`                                   |
-| Header `X-Request-Id` | Either the same as the `X-Request-Id` request header or a uniquely generated one. Use for identifying requests across systems and/or support requests. |
+| Header `X-Request-Id` | Either the same as the `X-Request-Id` request header or a uniquely generated one. Use for identifying requests across systems or support requests. |
 | Response body         | A JSON object with `ok` and `requestId` fields. |
 
 Status codes:
@@ -303,7 +303,7 @@ Status codes:
   }
   ```
 
-* **400 Invalid request**: If the request is incorrectly formed, such as required fields missing in the request JSON. Response JSON includes `"ok": false`:
+* **400 Invalid request**: If the request is improperly structured, for instance, if it lacks required fields in the JSON payload. Response JSON includes `"ok": false`:
 
   ```json
   {
@@ -315,7 +315,7 @@ Status codes:
 
 * **401 Unauthorized**: When the request does not have valid [authentication](#authentication-and-authorization). An example might be an invalid access token or invalid API key.
 * **403 Forbidden**: When the request does not have valid [authorization](#authentication-and-authorization). An example might be a valid access token, but the Adobe Developer Console project (technical account) is not subscribed to all required services.
-* **429 Too many requests**: When the system is overloaded by this client or in general. The clients can retry with an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff). The body is empty.
+* **429 Too many requests**: Occurs when the system is overwhelmed, either due to this particular client or from overall demand. The clients can retry with an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff). The body is empty.
 * **4xx error**: When there was any other client error. Usually a JSON response such as this is returned, although that is not guaranteed for all errors:
 
   ```json
@@ -336,60 +336,60 @@ Status codes:
   }
   ```
 
-Most clients are likely inclined to retry the exact same request with [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) on any error *except* configuration issues such as 401 or 403, or invalid requests like 400. Apart from regular rate limiting via 429 responses, a temporary service outage or limitation might result in 5xx errors. It would then be advisable to retry after a period of time.
+Most clients are likely inclined to retry the same request with [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) on any error *except* configuration issues such as 401 or 403, or invalid requests like 400. Apart from regular rate limiting by way of 429 responses, a temporary service outage or limitation might result in 5xx errors. It would then be advisable to retry after a period of time.
 
-All JSON responses (if present) include the `requestId` which is the same value as the `X-Request-Id` header. It is recommended to read from the header, since it is always present. The `requestId` is also returned in all events related to processing requests as `requestId`. Clients must not make any assumption about the format of this string, it is an opaque string identifier.
+All JSON responses (if present) include the `requestId`, which is the same value as the `X-Request-Id` header. Adobe recommends reading from the header because it is always present. The `requestId` is also returned in all events related to processing requests as `requestId`. Clients must not make any assumption about the format of this string. It is an opaque string identifier.
 
-## Opt-in to post-processing {#opt-in-to-post-processing}
+## Opt in to post-processing {#opt-in-to-post-processing}
 
 The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) supports a set of basic image post-processing options. Custom workers can explicitly opt in to post-processing by setting the field `postProcess` on the rendition object to `true`.
 
 The supported use cases are:
 
-* Crop a rendition to a rectangle whose limits are defined by crop.w, crop.h, crop.x, and crop.y. It is defined by `instructions.crop` in the rendition object.
-* Resize images using width, height, or both. It is defined by `instructions.width` and `instructions.height` in the rendition object. To resize using only width or height, set only one value. Compute Service conserves the aspect ratio.
-* Set the quality for a JPEG image. It is defined by `instructions.quality` in the rendition object. The best quality is denoted by `100` and smaller values indicate reduced quality.
-* Create interlaced images. It is defined by `instructions.interlace` in the rendition object.
-* Set DPI to adjust the rendered size for desktop publishing purposes by adjusting the scale applied to the pixels. It is defined by `instructions.dpi` in the rendition object to change dpi resolution. However, to resize the image so that it is the same size at a different resolution, use the `convertToDpi` instructions.
-* Resize the image such that its rendered width or height remains the same as the original at the specified target resolution (DPI). It is defined by `instructions.convertToDpi` in the rendition object.
+* Crop is a rendition to a rectangle whose limits by crop.w, crop.h, crop.x, and crop.y are defined. The cropping details are specified in the rendition object's `instructions.crop` field.
+* Resize images using width, height, or both. The `instructions.width` and `instructions.height` defines it in the rendition object. To resize using only width or height, set only one value. Compute Service conserves the aspect ratio.
+* Set the quality for a JPEG image. The `instructions.quality` defines it in the rendition object. A quality level of 100 represents the highest quality, while lower numbers signify a decrease in quality.
+* Create interlaced images. The `instructions.interlace` defines it in the rendition object.
+* Set DPI to adjust the rendered size for desktop publishing purposes by adjusting the scale applied to the pixels. The `instructions.dpi` defines it in the rendition object to change dpi resolution. However, to resize the image so that it is the same size at a different resolution, use the `convertToDpi` instructions.
+* Resize the image such that its rendered width or height remains the same as the original at the specified target resolution (DPI). The `instructions.convertToDpi` defines it in the rendition object.
 
 ## Watermark assets {#add-watermark}
 
 The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) supports adding a watermark to PNG, JPEG, TIFF, and GIF image files. The watermark is added following the rendition instructions in the `watermark` object on the rendition.
 
-Watermarking is done during rendition post-processing. To watermark assets, the custom worker [opts into post-processing](#opt-in-to-post-processing) by setting the field `postProcess` on the rendition object to `true`. If the worker does not opt-in then watermarking does not applied, even if the watermark object is set on the rendition object in the request.
+Watermarking is done during rendition post-processing. To watermark assets, the custom worker [opts into post-processing](#opt-in-to-post-processing) by setting the field `postProcess` on the rendition object to `true`. If the worker does not opt in, then watermarking is not applied, even if the watermark object is set on the rendition object in the request.
 
 ## Rendition instructions {#rendition-instructions}
 
-These are the available options for the `renditions` array in [/process](#process-request).
+The following are the available options for the `renditions` array in [`/process`](#process-request).
 
 ### Common fields {#common-fields}
 
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
-| `fmt`             | `string` | The renditions target format, can also be `text` for text extraction and `xmp` for extracting XMP metadata as xml. See [supported formats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
-| `worker`          | `string` | URL of a [custom application](develop-custom-application.md). Must be an `https://` URL. If this field is present, the rendition is created by a custom application. Any other set rendition field is then used in the custom application. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
-| `target` | `string` | URL to which the generated rendition should be uploaded using HTTP PUT. | `http://w.com/img.jpg` |
-| `target`          | `object` | Multipart pre-signed URL upload information for the generated rendition. This is for [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) with this [multipart upload behavior](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array of strings, one for each pre-signed part URL</li><li>`minPartSize`: the minimum size to use for one part = url</li><li>`maxPartSize`: the maximum size to use for one part = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
-| `userData`        | `object` | Optional reserved space controlled by the client and passed through as is to rendition events. Allows clients to add custom information to identify rendition events. Must not be modified or relied upon in custom applications, as clients are free to change this any time. | `{ ... }` |
+| `fmt`             | `string` | The renditions target format can also be `text` for text extraction and `xmp` for extracting XMP metadata as xml. See [supported formats](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support) | `png` |
+| `worker`          | `string` | URL of a [custom application](develop-custom-application.md). Must be an `https://` URL. If this field is present, a custom application creates the rendition. Any other set rendition field is then used in the custom application. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
+| `target` | `string` | The URL to which the generated rendition should be uploaded using HTTP PUT. | `http://w.com/img.jpg` |
+| `target`          | `object` | Multipart pre-signed URL upload information for the generated rendition. This information is for [AEM / Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) with this [multipart upload behavior](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array of strings, one for each pre-signed part URL</li><li>`minPartSize`: the minimum size to use for one part = url</li><li>`maxPartSize`: the maximum size to use for one part = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `userData`        | `object` | Optional. The client controls the reserved space and passes it through as is to rendition events. Lets a client add custom information to identify rendition events. It must not be modified or relied upon in custom applications, as clients are free to change it at any time. | `{ ... }` |
 
 ### Rendition specific fields {#rendition-specific-fields}
 
-For a list of currently supported file formats, see [supported file formats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
+For a list of currently supported file formats, see [supported file formats](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
 | `*`               | `*`      | Advanced, custom fields can be added that a [custom application](develop-custom-application.md) understands. | |
-| `embedBinaryLimit`| `number` in bytes | If this value is set and the rendition's file size is smaller than this value, the rendition is embedded in the event that is sent once the rendition generation is complete. The maximum size allowed for embedding is 32 KB (32 x 1024 bytes). If a rendition is larger in size than the `embedBinaryLimit` limit, it is be put at a location in cloud storage and is not embedded in the event. | `3276` |
+| `embedBinaryLimit`| `number` in bytes | When the file size of the rendition is less than the specified value, it is included in the event sent after its creation is finished. The maximum size allowed for embedding is 32 KB (32 x 1024 bytes). If a rendition is larger in size than the `embedBinaryLimit` limit, it is put at a location in cloud storage and is not embedded in the event. | `3276` |
 | `width`           | `number` | Width in pixels. only for image renditions. | `200` |
 | `height`          | `number` | Height in pixels. only for image renditions. | `200` |
-|                   |          |  Aspect ratio is always maintained if: <ul> <li> Both `width` and `height` are specified, then image fits in the size while maintaining the aspect ratio </li><li> Only `width` or only `height` is specified, the resulting image uses the corresponding dimension while keeping the aspect ratio</li><li> If neither `width` nor `height` is specified, the original image pixel size is used. It depends on the source type. For some formats, such as PDF files, a default size is used. There can be a maximum size limit.</li></ul> | |
+|                   |          |  The aspect ratio is always maintained if: <ul> <li> Both `width` and `height` are specified, then image fits in the size while maintaining the aspect ratio </li><li> If just `width` or `height` is specified, the resulting image uses the corresponding dimension while keeping the aspect ratio</li><li> If `width` or `height` is not specified, the original image pixel size is used. It depends on the source type. For some formats, such as PDF files, a default size is used. There can be a maximum size limit.</li></ul> | |
 | `quality`         | `number` | Specify jpeg quality in the range of `1` to `100`. Applicable only for image renditions. | `90` |
 | `xmp`             | `string` | Used only by XMP metadata writeback, it is base64 encoded XMP to write back to the specified rendition. | |
 | `interlace`       | `bool`   | Create interlaced PNG or GIF or progressive JPEG by setting it to `true`. It has no effect on other file formats. | |
-| `jpegSize`        | `number` | Approximate size of JPEG file in bytes. It overrides any `quality` setting. Has no effect on other formats. | |
-| `dpi`             | `number` or `object` | Set x and y DPI. For simplicity, it can also be set to a single number which is used for both x and y. It has no effect on the image itself. | `96` or `{ xdpi: 96, ydpi: 96 }` |
-| `convertToDpi`    | `number` or `object` | x and y DPI re-sample values while maintaining physical size. For simplicity, it can also be set to a single number which is used for both x and y. | `96` or `{ xdpi: 96, ydpi: 96 }` |
+| `jpegSize`        | `number` | Approximate size of JPEG file in bytes. It overrides any `quality` setting. It has no effect on other formats. | |
+| `dpi`             | `number` or `object` | Set x and y DPI. For simplicity, it can also be set to a single number, which is used for both x and y. It has no effect on the image itself. | `96` or `{ xdpi: 96, ydpi: 96 }` |
+| `convertToDpi`    | `number` or `object` | x and y DPI re-sample values while maintaining physical size. For simplicity, it can also be set to a single number, which is used for both x and y. | `96` or `{ xdpi: 96, ydpi: 96 }` |
 | `files`           | `array`  | List of files to include in the ZIP archive (`fmt=zip`). Each entry can either be a URL string or an object with the fields:<ul><li>`url`: URL to download file</li><li>`path`: Store file under this path in the ZIP</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
 | `duplicate`       | `string` | Duplicate handling for ZIP archives (`fmt=zip`). By default multiple files stored under the same path in the ZIP generates an error. Setting `duplicate` to `ignore` results in only the first asset to be stored and the rest to be ignored. | `ignore` |
 | `watermark`       | `object` | Contains instructions about the [watermark](#watermark-specific-fields). |  |
@@ -400,14 +400,14 @@ PNG format is used as a watermark.
 
 | Name              | Type     | Description | Example |
 |-------------------|----------|-------------|---------|
-| `scale`           | `number` | Scale of the watermark, between `0.0` and `1.0`. `1.0` means the watermark has its original scale (1:1) and the lower values reduce the watermark size. | A value of `0.5` means half of original size. |
+| `scale`           | `number` | Scale of the watermark, between `0.0` and `1.0`. `1.0` means that the watermark has its original scale (1:1) and the lower values reduce the watermark size. | A value of `0.5` means half of original size. |
 |`image`| `url` | URL to the PNG file to use to watermark. | |
 
 ## Asynchronous events {#asynchronous-events}
 
-Once processing of a rendition is finished or when an error occurs, an event is sent to an [[!DNL Adobe I/O] Events Journal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). Clients must listen to the journal URL provided through [/register](#register). The journal response includes an `event` array consisting of one object for each event, of which the `event` field includes the actual event payload.
+When processing of a rendition is finished or when an error occurs, an event is sent to an Adobe [!DNL `I/O Events Journal`]. Clients must listen to the journal URL provided through [`/register`](#register). The journal response includes an `event` array consisting of one object for each event, of which the `event` field includes the actual event payload.
 
-The [!DNL Adobe I/O] Event type for all events of the [!DNL Asset Compute Service] is `asset_compute`. The journal is automatically subscribed to this event type only and there is no further requirement to filter based on the [!DNL Adobe I/O] Event type. The service specific event types are available in the `type` property of the event.
+The Adobe [!DNL `I/O Events`] type for all events of the [!DNL Asset Compute Service] is `asset_compute`. The journal is automatically subscribed to this event type only and there is no further requirement to filter based on the [!DNL Adobe Developer] Event type. The service specific event types are available in the `type` property of the event.
 
 ### Event types {#event-types}
 
@@ -420,14 +420,14 @@ The [!DNL Adobe I/O] Event type for all events of the [!DNL Asset Compute Servic
 
 | Attribute   | Type     | Event         | Description |
 |-------------|----------|---------------|-------------|
-| `date`      | `string` | `*`           | Timestamp when event was sent in simplified extended [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format, as defined by JavaScript [Date.toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). |
+| `date`      | `string` | `*`           | Timestamp when the event was sent in simplified extended [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format, as defined by JavaScript [Date.toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). |
 | `requestId` | `string` | `*`           | The request id of the original request to `/process`, same as `X-Request-Id` header. |
 | `source`    | `object` | `*`           | The `source` of the `/process` request. |
 | `userData`  | `object` | `*`           | The `userData` of the rendition from the `/process` request if set. |
 | `rendition` | `object` | `rendition_*` | The corresponding rendition object passed in `/process`. |
 | `metadata`  | `object` | `rendition_created` | The [metadata](#metadata) properties of the rendition. |
 | `errorReason`  | `string` | `rendition_failed` | Rendition failure [reason](#error-reasons) if any. |
-| `errorMessage` | `string` | `rendition_failed` | Text giving more detail about the rendition failure if any. |
+| `errorMessage` | `string` | `rendition_failed` | The text giving more detail about the rendition failure if any. |
 
 ### Metadata {#metadata}
 
@@ -446,6 +446,6 @@ The [!DNL Adobe I/O] Event type for all events of the [!DNL Asset Compute Servic
 |---------|-------------|
 | `RenditionFormatUnsupported` | The requested rendition format is unsupported for the given source. |
 | `SourceUnsupported` | The specific source is unsupported even though the type is supported. |
-| `SourceCorrupt`     | The source data is corrupt. Includes empty files. |
-| `RenditionTooLarge` | The rendition could not be uploaded using the pre-signed URL(s) provided in `target`. The actual rendition size is available as metadata in `repo:size` and can be used by the client to re-process this rendition with the right number of pre-signed URLs. |
+| `SourceCorrupt`     | The source data is corrupt. It includes empty files. |
+| `RenditionTooLarge` | The rendition could not be uploaded using the pre-signed URLs provided in `target`. The actual rendition size is available as metadata in `repo:size` and is used by the client to re-process this rendition with the right number of pre-signed URLs. |
 | `GenericError`      | Any other unexpected error. |
