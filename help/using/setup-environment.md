@@ -15,9 +15,9 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
 
    * [Git](https://git-scm.com/)
    * [Docker Desktop](https://www.docker.com/get-started)
-   * [NodeJS](https://nodejs.org) (v14 LTS, odd versions are not recommended) and [NPM](https://www.npmjs.com). User of OSX HomeBrew can do `brew install node` to install both. Otherwise, download it from the [NodeJS download page](https://nodejs.org/en/)
-   * An IDE that is good for NodeJS, we recommend [Visual Studio Code (VS Code)](https://code.visualstudio.com) as it is the supported IDE for the debugger. You can use any other IDE as a code editor, but advanced usage (e.g. debugger) is not yet supported
-   * Install the latest[[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`)
+   * [NodeJS](https://nodejs.org) (v14 LTS, odd versions are not recommended) and [NPM](https://www.npmjs.com). User of OS X HomeBrew can do `brew install node` to install both. Otherwise, download it from the [NodeJS download page](https://nodejs.org/en/)
+   * An IDE that is good for NodeJS, Adobe recommends [Visual Studio Code (VS Code)](https://code.visualstudio.com) as it is the supported IDE for the debugger. You can use any other IDE as a code editor, but advanced usage (for example, debugger) is not yet supported
+   * Install the latest Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) (`aio`)
    <!-- - install using `npm install -g @adobe/aio-cli@7.1.0` -->
 
 1. Make sure to meet the [prerequisites](/help/using/understand-extensibility.md#prerequisites-and-provisioning)
@@ -28,11 +28,11 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
 >For now, use [!DNL Adobe I/O] CLI v7.1.0 of and do not use [!DNL Adobe I/O] CLI v8.
 -->
 
-## Setup a App Builder project {#create-App-Builder-project}
+## Set up an App Builder project {#create-App-Builder-project}
 
-1. Ensure system administrator or developer role in the [!DNL Experience Cloud] organization. This is set up by a system admin in the [Admin Console](https://adminconsole.adobe.com/overview).
+1. Ensure that there is a system administrator or developer role in the [!DNL Experience Cloud] organization. A system admin, in the [Admin Console](https://adminconsole.adobe.com/overview), sets up this role.
 
-1. Log onto the [Adobe Developer Console](https://console.adobe.io/). Ensure you are part of the same [!DNL Experience Cloud] organization as the [!DNL Experience Manager] as a [!DNL Cloud Service] integration. For more information about Adobe Developer Console, see [Console documentation](https://www.adobe.io/apis/experienceplatform/console/docs.html).
+1. Log onto the [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis). Ensure you are part of the same [!DNL Experience Cloud] organization as the [!DNL Experience Manager] as a [!DNL Cloud Service] integration. For more information about Adobe Developer Console, go to [Console documentation](https://developer.adobe.com/developer-console/docs/guides/).
 
 1. [Create an App Builder project](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Click **[!UICONTROL Create new project]** > **[!UICONTROL Project from template]**. Select App Builder. It creates a new App Builder Project with two workspaces: `Production` and `Stage`. Add additional workspaces, for example `Development`, as required.
 
@@ -40,7 +40,7 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
 
 ## Next step {#next-step}
 
-Now that your environment is set up, you are ready to [create a custom application](develop-custom-application.md).
+With your environment set up, you are ready to [create a custom application](develop-custom-application.md).
 
 <!-- More ideas:
  

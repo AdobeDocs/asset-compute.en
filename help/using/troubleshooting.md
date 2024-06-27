@@ -12,17 +12,17 @@ A few generic troubleshooting tips that may help you troubleshoot with Asset Com
 * Ensure any errors that may come from cleanup on failure don't generate their own errors that hide the original problem.
 
 * When starting the developer tool for the first time with a new [!DNL Asset Compute Service] integration, it may fail the first processing request if the Asset Compute Events Journal is not completely set up. Wait for some time for the journal to set up before sending another request.
-* If you run into errors sending Asset Compute `/register` or `/process` requests, make sure that all the necessary APIs are added to the [!DNL Adobe I/O] Project and Workspace&mdash;that is, Asset Compute, [!DNL Adobe I/O] Events, [!DNL Adobe I/O] Events Management, and [!DNL Adobe I/O] Runtime.
+* Ensure all required APIs&ndash;Asset Compute, Adobe [!DNL I/O Events], Events Management, and Runtime&ndash;are included in your Adobe [!DNL `I/O Project`] and Workspace to avoid `/register` or `/process` request errors.
 
-## Log in issues via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
+## Log in issues by way of Adobe [!DNL aio-cli] {#login-via-aio-cli}
 
-If you have issues logging in to the [!DNL Adobe Developer Console] [through the [!DNL Adobe I/O] CLI](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli), then manually add the credentials required for developing, testing, and deploying your custom application:
+If you have issues logging in to the [!DNL Adobe Developer Console] [through the Adobe [!DNL aio-cli]](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli), then manually add the credentials required for developing, testing, and deploying your custom application:
 
-1. Navigate to your Adobe Developer App Builder project and workspace on the [Adobe Developer Console](https://console.adobe.io/) and press **[!UICONTROL Download]** from the top-right corner. Open this file and save this JSON to a safe place on your machine.
+1. Navigate to your Adobe Developer App Builder project and workspace on the [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) and press **[!UICONTROL Download]** from the top-right corner. Open this file and save this JSON to a safe place on your machine.
 
 1. Navigate to the ENV file in your Adobe Developer App Builder Application.
 
-1. Add the [!DNL Adobe I/O] Runtime Credentials. Get the [!DNL Adobe I/O] A Runtime credentials from the downloaded JSON. The credentials are under `project.workspace.services.runtime`. Add the [!DNL Adobe I/O] Runtime credentials in the `AIO_runtime_XXX` variables:
+1. Add the Adobe [!DNL I/O Runtime] credentials. Get the Adobe [!DNL I/O Runtime] credentials from the downloaded JSON. The credentials are under `project.workspace.services.runtime`. Add the [!DNL Adobe I/O] Runtime credentials in the `AIO_runtime_XXX` variables:
 
     ```json
     AIO_runtime_auth=

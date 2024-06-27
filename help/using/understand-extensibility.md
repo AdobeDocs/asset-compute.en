@@ -5,24 +5,24 @@ exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
 ---
 # Introduction to extensibility {#introduction-to-extensibilty}
 
-Many rendition requirements such as converting to formats and resizing images are addressed by [Processing Profiles in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). More complex business requirements may need a custom-created solution that suits an organization's needs. [!DNL Asset Compute Service] can be extended by creating custom applications that are called from Processing Profiles in [!DNL Experience Manager]. These custom applications cater to the [supported use cases](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+Many rendition requirements such as converting to formats and resizing images are addressed by [Processing Profiles in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview). More complex business requirements may need a custom-created solution that suits an organization's needs. [!DNL Asset Compute Service] can be extended by creating custom applications that are called from Processing Profiles in [!DNL Experience Manager]. These custom applications cater to the [supported use cases](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use).
 
 >[!NOTE]
 >
 >[!DNL Asset Compute Service] is available only for use with [!DNL Experience Manager] as a [!DNL Cloud Service].
 
-The custom applications are headless [Adobe Developer App Builder](https://github.com/AdobeDocs/app-builder) apps. Extending [!DNL Asset Compute Service] with custom applications is made simple through the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) and Adobe Developer App Builder developer tooling. This allows developers to focus on business logic. Creating custom applications is as simple as creating a plain serverless [!DNL Adobe I/O] Runtime action. It is a single Node.js JavaScript function. The [basic custom application example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrates it.
+The custom applications are headless [Adobe Developer App Builder](https://github.com/AdobeDocs/app-builder) apps. Extending [!DNL Asset Compute Service] with custom applications is made simple through the [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) and Adobe Developer App Builder developer tooling. These tools let developers focus on business logic. Creating custom applications is as simple as creating a plain serverless Adobe [!DNL I/O Runtime] action. It is a single Node.js JavaScript function. The [basic custom application example](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrates it.
 
 ## Prerequisites and provisioning requirements {#prerequisites-and-provisioning}
 
 Ensure you meet the following prerequisites:
 
 * Adobe Developer App Builder tools are installed on your machine.
-* An [!DNL Experience Cloud] organization. More information [here](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials).
+* An [!DNL Experience Cloud] organization. For more information, go to [Start your App Builder Journey](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials).
 * The Experience Organization must have [!DNL Experience Manager] as a [!DNL Cloud Service] enabled.
-* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Adobe Developer App Builder] developer preview program. See [how to apply for access](https://developer.adobe.com/app-builder/docs/overview/getting_access).
+* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Adobe Developer App Builder] developer sneak peek program. Go to [how to apply for access](https://developer.adobe.com/app-builder/docs/overview/getting_access).
 * Ensure a developer role or administrator permissions in the organization for the developer.
-* Ensure that [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) is installed locally.
+* Ensure that Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) is installed locally.
 
 <!-- TBD for later:
 
