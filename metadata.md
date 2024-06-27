@@ -22,11 +22,11 @@ The metadata.md file includes repo-level metadata that passes through to user gu
 |--- |--- |
 | solution-title | Used in article header as link |
 | solution-hub-url | Opens support hub page |
-| solution-icon | Displays solution icon next to solution title. Not yet implemented |
+| solution-icon | Displays a solution icon next to the solution title. Not yet implemented |
 | getting-started-url | Link to the getting started page |
-| tutorials-url | Link to video tutorials--either helpx tutorials or KT tutorials |
-| mini-toc-levels | Determines the number of heading levels that appear in right rail. default is 2 |
-| git-repo | Specifies the location of the master repo for internal use |
+| tutorials-url | Link to video tutorials--either Helpx tutorials or Knowledge Transfer tutorials |
+| mini-toc-levels | Determines the number of heading levels that appear in the right rail. default is 2 |
+| git-repo | Specifies the location of the primary repo for internal use |
 
 In TOC.md file
 

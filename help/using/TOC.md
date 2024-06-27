@@ -14,7 +14,7 @@ breadcrumb-title: Asset Compute Service Guide
 
 + [Asset Compute Service user guide](home.md)
 + [Overview](introduction.md)
-+ [Supported file formats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
++ [Supported file formats](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support)
 + [Architecture](architecture.md)
 + [API references](api.md)
 + Extend Asset Compute Service {#extend}
@@ -24,6 +24,6 @@ breadcrumb-title: Asset Compute Service Guide
   + [Develop a custom application](develop-custom-application.md)
   + [Test a custom application](test-custom-application.md)
   + [Deploy a custom application](deploy-custom-application.md)
-  + [Integrate and use in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+  + [Integrate and use in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview)
 + [Troubleshoot](troubleshooting.md)
 + [Contribute to the open-source project](contribute-to-compute-service.md)
