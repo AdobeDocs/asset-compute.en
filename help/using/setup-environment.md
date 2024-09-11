@@ -38,6 +38,10 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
 
 1. In the App Builder Project, select a workspace and subscribe to the services needed for Asset Compute. Click **Add to Project** > **API** and add `Asset Compute`, `IO Events`, and `IO Events Management` services. When adding the first API, it prompts to create a private key. Save this information on your machine as you need this key to test your custom application with the developer tool.
 
+   >[!NOTE]
+   >
+   >JWT is deprecated and Private Key is not available for download. While we are working on updating the testing tools, note that custom workers created using OAuth can be deployed but devtools would not work.
+
 ## Next step {#next-step}
 
 With your environment set up, you are ready to [create a custom application](develop-custom-application.md).
