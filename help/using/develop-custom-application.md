@@ -91,6 +91,10 @@ Insert the subsequent credentials for the development tool into the `.env` file.
     ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
     ```
 
+   >[!NOTE]
+   >
+   >JWT is deprecated and Private Key is not available for download. While we are working on updating the testing tools, note that custom workers created using OAuth can be deployed but devtools would not work.
+
 1. Download the file from the Adobe Developer Console. Go to the root of the project and click on "Download All" in the upper-right corner. The file is downloaded with `<namespace>-<workspace>.json` as the filename. Do one of the following:
 
    * Rename the file as `console.json` and move it in the root of your project.
