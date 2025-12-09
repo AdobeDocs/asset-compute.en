@@ -5,7 +5,7 @@ exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
 ---
 # About [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] is a scalable and extensible service of Adobe Experience Cloud to process digital assets. It can transform image, video, document, and other file formats into different renditions including thumbnails, extracted text and metadata, archives and more. Developers have the ability to plugin custom applications (also called custom workers) to address custom use cases, built using [Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview) and running in serverless Adobe [[!DNL I/O Runtime]](https://developer.adobe.com/runtime/).
+[!DNL Asset Compute Service] is a scalable and extensible service of Adobe Experience Cloud to process digital assets. It can transform image, video, document, and other file formats into different renditions including thumbnails, extracted text and metadata, archives and more. Developers have the ability to plugin custom applications (also called custom workers) to address custom use cases, built using [Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#) and running in serverless Adobe [[!DNL I/O Runtime]](https://developer.adobe.com/runtime/).
 
 This documentation covers [!DNL Asset Compute Service] topics such as how to develop, manage, deploy, and troubleshoot your custom code. To know what an [!DNL Asset Compute Service] is, go to this [introduction](introduction.md). See also [what the service can do for you](introduction.md#possible-use-cases-benefits).
 

@@ -18,9 +18,9 @@ The custom applications are headless [Adobe Developer App Builder](https://githu
 Ensure you meet the following prerequisites:
 
 * Adobe Developer App Builder tools are installed on your machine.
-* An [!DNL Experience Cloud] organization. For more information, go to [Start your App Builder Journey](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials).
+* An [!DNL Experience Cloud] organization. For more information, go to [Start your App Builder Journey](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#acquire-access-and-credentials).
 * The Experience Organization must have [!DNL Experience Manager] as a [!DNL Cloud Service] enabled.
-* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Adobe Developer App Builder] developer sneak peek program. Go to [how to apply for access](https://developer.adobe.com/app-builder/docs/overview/getting_access).
+* [!DNL Adobe Experience Cloud] organization is part of the [!DNL Adobe Developer App Builder] developer sneak peek program. Go to [how to apply for access](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/set-up#access-and-credentials).
 * Ensure a developer role or administrator permissions in the organization for the developer.
 * Ensure that Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) is installed locally.
 

@@ -15,11 +15,11 @@ Before you begin to develop a custom application:
 
 Make sure to have [Adobe aio-cli](https://github.com/adobe/aio-cli) installed locally.
 
-1. To create a custom application, [create an App Builder project](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). To do so, run `aio app init <app-name>` in your terminal.
+1. To create a custom application, [create an App Builder project](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#4-bootstrapping-new-app-using-the-cli). To do so, run `aio app init <app-name>` in your terminal.
 
-    If you have not logged in already, this command prompts a browser asking you to sign into the [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) with your Adobe ID. See [here](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) for more information on signing in from the cli.
+    If you have not logged in already, this command prompts a browser asking you to sign into the [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) with your Adobe ID. See [here](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli) for more information on signing in from the cli.
 
-    Adobe recommends that you should log in first. If you are having issues, then follow the instructions [to create an app without logging in](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+    Adobe recommends that you should log in first. If you are having issues, then follow the instructions [to create an app without logging in](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. After logging in, follow the prompts in the CLI and select the `Organization`, `Project`, and `Workspace` to use for the application. Choose the project and workspace that you created when you [set up your environment](setup-environment.md). When prompted `Which extension point(s) do you wish to implement ?`, make sure to select `DX Asset Compute Worker`:
 
@@ -56,7 +56,7 @@ Make sure to have [Adobe aio-cli](https://github.com/adobe/aio-cli) installed lo
 
 1. Follow the rest of the prompts and open the new application in Visual Studio Code (or your favorite code editor). It contains the scaffolding and sample code for a custom application.
 
-    Read here about the [main components of an App Builder app](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
+    Read here about the [main components of an App Builder app](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#5-anatomy-of-an-app-builder-application).
 
     The template application leverages Adobe's [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) for the uploading, downloading, and orchestration of application renditions so developers only need to implement the custom application logic. Inside the `actions/<worker-name>` folder, the `index.js` file is where to add the custom application code.
 
@@ -98,7 +98,7 @@ Insert the subsequent credentials for the development tool into the `.env` file.
 1. Download the file from the Adobe Developer Console. Go to the root of the project and click on "Download All" in the upper-right corner. The file is downloaded with `<namespace>-<workspace>.json` as the filename. Do one of the following:
 
    * Rename the file as `console.json` and move it in the root of your project.
-   * Optionally, you can add the absolute path to the Adobe Developer Console integration JSON file. This file is the same [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace.
+   * Optionally, you can add the absolute path to the Adobe Developer Console integration JSON file. This file is the same [`console.json`](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#42-developer-is-not-logged-in-as-enterprise-organization-user) file that is downloaded in your project workspace.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -237,7 +237,7 @@ const orgId = params.auth.orgId; // Experience Cloud Organization
 
 ### Pass credentials for third-party systems {#pass-credentials-for-tp}
 
-To handle credentials for other external services, pass them as default parameters on the actions. They are automatically encrypted in transit. For more information, see [creating actions in the Adobe I/O Runtime developer guide](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/). Then set them using environment variables during deployment. These parameters can be accessed in the `params` object inside the action.
+To handle credentials for other external services, pass them as default parameters on the actions. They are automatically encrypted in transit. For more information, see [creating actions in the Adobe I/O Runtime developer guide](https://developer.adobe.com/app-builder/docs/guides/runtime_guides/creating-actions#). Then set them using environment variables during deployment. These parameters can be accessed in the `params` object inside the action.
 
 Set the default parameters inside the `inputs` in the `manifest.yml`:
 
@@ -272,7 +272,7 @@ const key = params.secretKey;
 
 ## Sizing applications {#sizing-workers}
 
-An application runs in a container in Adobe [!DNL I/O Runtime] with [limits](https://developer.adobe.com/runtime/docs/guides/using/system_settings/) that can be configured through the `manifest.yml`:
+An application runs in a container in Adobe [!DNL I/O Runtime] with [limits](https://developer.adobe.com/app-builder/docs/guides/runtime_guides/system-settings#) that can be configured through the `manifest.yml`:
 
 ```yaml
     actions:
