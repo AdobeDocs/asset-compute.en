@@ -9,7 +9,7 @@ The [!DNL Asset Compute Service] is built on top of the serverless Adobe [!DNL `
 
 [!DNL Asset Compute Service] is extendable by creating custom applications based on [!DNL Adobe Developer App Builder]. These custom applications are [!DNL Project Adobe Developer App Builder] headless apps and do tasks such as add custom conversion tools or call external APIs to perform image operations.
 
-[!DNL Project Adobe Developer App Builder] is a framework to build and deploy custom web applications on the Adobe [!DNL `I/O Runtime`]. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe's UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
+[!DNL Project Adobe Developer App Builder] is a framework to build and deploy custom web applications on the Adobe [!DNL `I/O Runtime`]. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe's UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 
 The foundation on which the architecture is based includes:
 

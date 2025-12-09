@@ -19,7 +19,7 @@ See this list of [open-sourced libraries](https://github.com/adobe/asset-compute
 
 * [Get started with Apache OpenWhisk](https://github.com/apache/openwhisk/tree/master/docs#getting-started-with-openwhisk).
 * [Lab: Build composable AI with [!DNL Adobe Sensei] functions and Adobe [!DNL I/O Runtime]](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
-* Adobe [[!DNL I/O Runtime] FAQ](https://developer.adobe.com/runtime/docs/support/faq/)
+* Adobe [[!DNL I/O Runtime] FAQ](https://developer.adobe.com/app-builder/docs/intro_and_overview/faq#using-io-runtime).
 
 <!-- **TBD** for post-release:
 * Link to Adobe Developer App Builder open-source components.

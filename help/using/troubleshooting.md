@@ -16,7 +16,7 @@ A few generic troubleshooting tips that may help you troubleshoot with Asset Com
 
 ## Log in issues by way of Adobe [!DNL aio-cli] {#login-via-aio-cli}
 
-If you have issues logging in to the [!DNL Adobe Developer Console] [through the Adobe [!DNL aio-cli]](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli), then manually add the credentials required for developing, testing, and deploying your custom application:
+If you have issues logging in to the [!DNL Adobe Developer Console] [through the Adobe [!DNL aio-cli]](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#3-signing-in-from-cli), then manually add the credentials required for developing, testing, and deploying your custom application:
 
 1. Navigate to your Adobe Developer App Builder project and workspace on the [Adobe Developer Console](https://developer.adobe.com/console/user/servicesandapis) and press **[!UICONTROL Download]** from the top-right corner. Open this file and save this JSON to a safe place on your machine.
 

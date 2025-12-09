@@ -1,16 +1,16 @@
 # Guidelines to Contribute to the Documentation
 
-## Documentation Philosophy
+## Documentation philosophy
 
 Users work in a highly competitive environments, striving to create digital experiences that set them apart from their competitors. Therefore, it is vital that when Adobe delivers advanced new tools, that these tools are complemented with accurate and clear documentation. Documentation that lets customers use their investment immediately and maximize ROI.
 
 The goal is to put documentation into the hands of its users as soon as possible. Therefore, Adobe prioritizes accurate, usable documentation, and strives to update and improve it continually.
 
-## Documentation Contributions
+## Documentation contributions
 
 In the interest of continually improving the documentation, the entire community of users is welcome to contribute to the documentation. Be it through pull requests or issues, improvements to the documentation can be corrections, clarifications, expansions, and additional examples.
 
-## Documentation Standards
+## Documentation standards
 
 Any contribution to the documentation, either in the form of a pull request or an issue, should conform to Adobe's contribution and documentation standards.
 
@@ -24,23 +24,23 @@ Exceptions to this rule are release notes where known issues can be listed with 
 
 Any ideas you may have to improve the documentation are welcome as contributions. However, comments, issues, and pull requests are intended for *contributions* only. They are not to answer your questions about how to use the product, implement projects, or solve technical issues.
 
-Any questions about the usage or technical errors you may have should be reported through the normal support process via the [[!DNL Experience Manager] Customer Support portal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) or discussed in the [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Any questions about the usage or technical errors you may have should be reported through the normal support process through the [[!DNL Experience Manager] Customer Support portal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) or in the [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 ***Documentation contributions are not a replacement for Adobe Customer Care*** and any such contributions seeking answers to support-related questions are rejected.
 
-### Contributions must clearly reference affected documentation pages.
+### Contributions must clearly reference affected documentation pages
 
 If you create an issue to suggest improvements to the documentation, you must include links to the pages affected. If you create an issue by using the **Edit this page** link on a documentation page, the issue is created with a link to the page automatically.
 
 This process does not apply to pull requests since pull requests by their nature reference the affected pages.
 
-## Documentation Guidelines
+## Documentation guidelines
 
 Adobe asks that any contributions to its documentation follow certain style guidelines.
 
 Following these guidelines makes the review of your contribution easier and therefore integration into Adobe's documentation is faster.
 
-### Language and Style
+### Language and style
 
 #### Language
 
@@ -68,6 +68,6 @@ Screenshots are to be used judiciously and only when a textual description is in
 
 Do not use markers or other annotations such as red frames, arrows, or text on the screenshots. This way the screenshots are easier to re-use and replicate in localized versions of the documentation.
 
-### Version-specific References
+### Version-specific references
 
 Try to avoid any direct references to a specific version throughout the documentation content whenever possible. This recommendation makes the documentation more flexible and extensible for future versions.

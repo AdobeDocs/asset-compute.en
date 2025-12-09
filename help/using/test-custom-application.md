@@ -158,7 +158,7 @@ See a complete list and description of [Asset Compute error reasons](https://git
 
 The following steps show how you can debug your custom application using Visual Studio Code. It allows for seeing live logs, hit breakpoints and step through code as well as live reloading of local code changes upon every activation.
 
-The `aio` out-of-the-box automates many of these steps. Go to the section Debugging the Application in the [Adobe Developer App Builder documentation](https://developer.adobe.com/app-builder/docs/getting_started/first_app). For now, the below steps include a workaround.
+The `aio` out-of-the-box automates many of these steps. Go to the section Debugging the Application in the [Adobe Developer App Builder documentation](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#). For now, the below steps include a workaround.
 
 1. Install the latest [wskdebug](https://github.com/apache/openwhisk-wskdebug) from GitHub and the optional [ngrok](https://www.npmjs.com/package/ngrok).
 
@@ -194,7 +194,7 @@ The `aio` out-of-the-box automates many of these steps. Go to the section Debugg
   
    Fetch the `ACTION NAME` from the output of `aio app deploy`.
 
-1. Select `wskdebug worker` from the run/debug configuration and press the play icon. Wait for it to start until it displays **[!UICONTROL Ready for activations]** in the **[!UICONTROL Debug Console]** window.
+1. Select `wskdebug worker` from the run/debugged configuration and press the play icon. Wait for it to start until it displays **[!UICONTROL Ready for activations]** in the **[!UICONTROL Debug Console]** window.
 
 1. Click **[!UICONTROL run]** in the Devtool. You can see the actions running in the Visual Studio Code editor and the logs start displaying.
 

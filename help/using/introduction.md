@@ -9,7 +9,7 @@ exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
 
 Developers have the ability to plugin custom asset applications (also called custom workers) to address custom use cases. The service works on the Adobe [!DNL I/O Runtime]. It is extendable through [!DNL Adobe Developer App Builder] headless apps written in Node.js. They can do custom operations such as calling external APIs to perform image operations or leverage [!DNL Adobe Sensei] support.
 
-[!DNL Adobe Developer App Builder] is a framework to build and deploy custom web applications on Adobe [!DNL I/O Runtime] to extend Adobe Experience Cloud solutions. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe's UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview/).
+[!DNL Adobe Developer App Builder] is a framework to build and deploy custom web applications on Adobe [!DNL I/O Runtime] to extend Adobe Experience Cloud solutions. To create custom applications, the developers can leverage [!DNL React Spectrum] (Adobe's UI toolkit), create microservices, create custom events, and orchestrate APIs. See [documentation of Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ You can use the [!DNL Asset Compute] web service to generate thumbnails for diff
 >[!MORELIKETHIS]
 >
 >* [Overview of asset processing with asset microservices in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/asset-microservices-overview).
->* [Documentation of Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
+>* [Documentation of Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 >* [Supported file formats for processing](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
 <!-- **TBD:**
