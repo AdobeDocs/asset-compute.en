@@ -108,11 +108,11 @@ After each rendition is created and stored in a file with the path provided by `
 
 The `batchWorker()` has a different behavior. It processes all renditions, and only after all have been processed, it uploads them.
 
-## [!DNL Adobe I/O] Events {#aio-events}
+## [!DNL Adobe I/O Events] {#aio-events}
 
 The SDK sends Adobe [!DNL I/O Events] for each rendition. These events are either type `rendition_created` or `rendition_failed` depending on the outcome. For more information, see [Asset Compute asynchronous events](api.md#asynchronous-events).
 
-## Receive [!DNL Adobe I/O] Events {#receive-aio-events}
+## Receive [!DNL Adobe I/O Events] {#receive-aio-events}
 
 The client polls the Adobe [!DNL I/O Events] journal according to its consumption logic. The initial journal URL is the one provided in the `/register` API response. Events can be identified using the `requestId` that is present in the events and is the same as returned in `/process`. Every rendition has a separate event that gets sent as soon as the rendition has been uploaded (or failed). When it receives a matching event, the client can display or otherwise handle the resulting renditions.
 
@@ -134,7 +134,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-For details on how to get journal events, see Adobe [[!DNL I/O Events] API](https://developer.adobe.com/events/docs/guides/api/journaling_api/).
+For details on how to get journal events, see Adobe [[!DNL I/O Events] API](https://developer.adobe.com/events/docs/guides/api/journaling-api#).
 
 <!-- TBD:
 * Illustration of the controls/data flow.
