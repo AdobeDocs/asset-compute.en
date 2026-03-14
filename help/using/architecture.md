@@ -31,7 +31,8 @@ The architecture consists of the following parts:
 
 * **A [common application library](https://github.com/adobe/asset-compute-sdk)** handles common tasks. For example, downloading the source file, uploading the renditions, error reporting, event sending, and monitoring. This design ensures that application development remains straightforward, adhering to the serverless concept, with interactions limited to the local filesystem.
 
-<!-- TBD:
+<!-- 
+TBD:
 
 * About the YAML file?
 * minimize description to custom applications

@@ -25,7 +25,8 @@ You can use the [!DNL Asset Compute] web service to generate thumbnails for diff
 >
 >The service does not provide asset storage. Users provide it and provide references to source and rendition file locations in cloud storage.
 
-<!-- TBD: Should this be mentioned in the docs?
+<!-- 
+TBD: Should this be mentioned in the docs?
 
 |Asset Compute Service does not do this|Expectations from implementing client|
 |---|---|
@@ -42,7 +43,8 @@ You can use the [!DNL Asset Compute] web service to generate thumbnails for diff
 >* [Documentation of Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/#).
 >* [Supported file formats for processing](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/file-format-support).
 
-<!-- **TBD:**
+<!-- 
+**TBD:**
 * Clarify the service can only be used within AEM as Cloud Service. The docs provided as context for custom application developers. Not to be used as a standalone service.
   ** and API as that plays a role in custom applications (accepting standard params, invoking Nui itself in the future, etc. (this is an outlook))
 

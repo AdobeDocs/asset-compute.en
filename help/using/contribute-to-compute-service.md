@@ -21,7 +21,8 @@ See this list of [open-sourced libraries](https://github.com/adobe/asset-compute
 * [Lab: Build composable AI with [!DNL Adobe Sensei] functions and Adobe [!DNL I/O Runtime]](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
 * Adobe [[!DNL I/O Runtime] FAQ](https://developer.adobe.com/app-builder/docs/intro_and_overview/faq#using-io-runtime).
 
-<!-- **TBD** for post-release:
+<!-- 
+**TBD** for post-release:
 * Link to Adobe Developer App Builder open-source components.
 * Issues in `aio` can be reported in Adobe Developer App Builder repos.
 * Issues in asset-compute-sdk or devtool goes into the relevant repos from Nui.

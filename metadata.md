@@ -10,7 +10,7 @@ tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/
 mini-toc-levels: 2
 feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.en
-index: y
+index: true
 recommendations: noDisplay
 ---
 
