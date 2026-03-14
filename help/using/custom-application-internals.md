@@ -66,7 +66,9 @@ The [!DNL Asset Compute Service] sends the custom application rendition requests
 
 The [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) used by a custom application handles the HTTP POST request. It also handles downloading of the source, uploading renditions, sending Adobe [!DNL I/O Events] and error handling.
 
-<!-- TBD: Add the application diagram. -->
+<!-- 
+TBD: Add the application diagram. 
+-->
 
 ### Application code {#application-code}
 
@@ -136,7 +138,8 @@ await Promise.all(events.map(event => {
 
 For details on how to get journal events, see Adobe [[!DNL I/O Events] API](https://developer.adobe.com/events/docs/guides/api/journaling-api#).
 
-<!-- TBD:
+<!-- 
+TBD:
 * Illustration of the controls/data flow.
 * Basic overview, in text and not code, of how an application works.
 -->

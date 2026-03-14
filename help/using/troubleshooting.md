@@ -37,7 +37,8 @@ If you have issues logging in to the [!DNL Adobe Developer Console] [through the
 
 1. Set up the rest of the [required credentials](develop-custom-application.md) needed for the developer tool.
 
-<!-- TBD for later:
+<!-- 
+TBD for later:
 Add any best practices for developers in this section:
 * Any items to take care of when creating projects.
 * Any naming conventions, reserved keywords, etc.?

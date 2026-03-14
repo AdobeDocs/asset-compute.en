@@ -24,7 +24,8 @@ Ensure you meet the following prerequisites:
 * Ensure a developer role or administrator permissions in the organization for the developer.
 * Ensure that Adobe [[!DNL aio-cli]](https://github.com/adobe/aio-cli) is installed locally.
 
-<!-- TBD for later:
+<!-- 
+TBD for later:
 
 * What all accesses and licenses are required?
 * What all permissions are required to create, debug, and deploy custom applications?

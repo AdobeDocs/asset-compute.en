@@ -46,7 +46,8 @@ To create a setup that allows you to develop for [!DNL Asset Compute Service], f
 
 With your environment set up, you are ready to [create a custom application](develop-custom-application.md).
 
-<!-- More ideas:
+<!-- 
+More ideas:
  
 * Any steps in the beginning that lead to gotchas later should be called out for caution? For example,
   * don't change some defaults initially

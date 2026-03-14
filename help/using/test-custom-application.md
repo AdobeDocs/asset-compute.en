@@ -13,7 +13,8 @@ Install [Docker Desktop](https://www.docker.com/get-started) on your machine. To
 $ aio app test
 ```
 
-<!-- TBD
+<!-- 
+TBD
 To run tests for a custom application, run `aio asset-compute test-worker` command at the root of the custom application application.
 
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
