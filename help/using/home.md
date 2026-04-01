@@ -2,6 +2,18 @@
 title: "[!DNL Adobe Asset Compute Service] User Guide"
 description: This documentation covers [!DNL Asset Compute Service] tasks such as introduction, how to develop, manage, deploy, and troubleshoot your custom code.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
+TQID: https://experienceleague.adobe.com/pLoude239KQnS4no1oSFaNzfzlHFdXvprrBg-NMUI0g
+product_v2:
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # About [!DNL Asset Compute Service]
 

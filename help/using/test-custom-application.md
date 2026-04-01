@@ -2,6 +2,18 @@
 title: Test and debug [!DNL Asset Compute Service] custom application
 description: Test and debug [!DNL Asset Compute Service] custom application.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
+TQID: https://experienceleague.adobe.com/43OlMHlUxu78CbxOEaAXi7gN6pwYS3QqGgV44WDSyCc
+product_v2:
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Test and debug a custom application {#test-debug-custom-worker}
 

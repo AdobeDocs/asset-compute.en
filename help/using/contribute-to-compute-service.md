@@ -2,6 +2,15 @@
 title: Contribute to the open-source components of [!DNL Asset Compute Service]
 description: Contribute to the open-source components of [!DNL Asset Compute Service].
 exl-id: 99a4b4d9-4709-4f8e-9f8c-96ba1783c4c3
+TQID: https://experienceleague.adobe.com/LAVDCVO3tXCtApoq2h-ZLHN-7Q4rrB88CUrtJ-sKbcE
+product_v2:
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Contribute {#contribute}
 

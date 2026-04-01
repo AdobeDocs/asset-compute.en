@@ -2,6 +2,15 @@
 title: Deploy [!DNL Asset Compute Service] custom application
 description: Deploy [!DNL Asset Compute Service] custom application.
 exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
+TQID: https://experienceleague.adobe.com/JN29pTaNB93DKALUqIbXhwswlzHiYQSowFZAbgHA5TA
+product_v2:
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Deploy a custom application {#deploy-custom-application}
 
