@@ -2,6 +2,18 @@
 title: Set the development environment required for [!DNL Asset Compute Service]
 description: Developer environment setup for [!DNL Asset Compute Service] to start creating and testing custom code.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
+TQID: https://experienceleague.adobe.com/vrjMTugKwGmpQ-zqOGSpOr9m05GfXMd02B-p2MIHh5E
+product_v2:
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+    internal-label: APIs
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Setup a developer environment {#create-dev-environment}
 

@@ -2,6 +2,21 @@
 title: Architecture of [!DNL Asset Compute Service]
 description: How [!DNL Asset Compute Service] API, applications, and SDK work together to provide a cloud-native asset processing service.
 exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
+TQID: https://experienceleague.adobe.com/HM9aYFHI98DFs4rfcStr-mpAfYVrjvMtlO6N7azO-20
+product_v2:
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+    internal-label: APIs
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 ---
 # Architecture of [!DNL Asset Compute Service] {#overview}
 
