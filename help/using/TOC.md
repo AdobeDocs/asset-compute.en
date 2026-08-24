@@ -1,15 +1,6 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Assets
-product_v2:
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-    internal-label: "Experience Manager"
-  - id: d09181b5-a36a-43de-ba01-36641440bc43
-    internal-label: "Experience Manager Assets"
-usetq: true
-type: Documentation
-role: Developer
 feature: Asset Compute Microservices
 user-guide-title: Asset Compute Service Guide
 user-guide-description: This documentation covers [!DNL Asset Compute Service] tasks such as how to develop, manage, deploy, and troubleshoot your custom code.
