@@ -91,9 +91,9 @@ If you did not log in, refer to our troubleshooting guide to [set up credentials
 
 The tool for developers to evaluate custom apps using the [!DNL Asset Compute service] necessitates the use of a cloud storage container. This container is essential to store test files and for the reception and presentation of renditions produced by the apps.
 
-   >[!NOTE]
-   >
-   >This container is separate from the cloud storage of [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]. It only applies for developing and testing with the Asset Compute developer tool.
+>[!NOTE]
+>
+>This container is separate from the cloud storage of [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]. It only applies for developing and testing with the Asset Compute developer tool.
 
 Make sure to have access to a [supported cloud storage container](https://github.com/adobe/asset-compute-devtool#prerequisites). This container is used collectively by various developers for different projects whenever necessary.
 
